@@ -3,6 +3,7 @@
     <Header :language="language" @changeLanguage="handleChangeLanguage($event)"></Header>
     <Services></Services>
     <Advantages></Advantages>
+    <Cooperation></Cooperation>
   </div>
 </template>
 
@@ -10,11 +11,13 @@
 import Header from "./components/Header";
 import Services from "./components/Services";
 import Advantages from "./components/Advantages";
+import Cooperation from "./components/Cooperation";
 export default {
   components: {
     Header,
     Services,
-    Advantages
+    Advantages,
+    Cooperation
   },
   data() {
     return {

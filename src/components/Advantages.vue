@@ -38,7 +38,7 @@ export default {
 @import "@/scss/_variables";
 
 .advantages {
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 40px;
 }
 .section_title {
@@ -52,13 +52,14 @@ export default {
 .section_content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-left: auto;
   margin-right: auto;
-  max-width: 80%;
+  max-width: 75%;
+  flex-basis: 1;
 }
 .item {
-  max-width: 230px;
+  width: 230px;
   margin-bottom: 50px;
 }
 
@@ -67,9 +68,10 @@ export default {
 }
 .item_text {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   text-transform: uppercase;
   color: $mainFontColor;
+  padding-top: 15px;
 }
 </style>
