@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8c6ddfa88c9b80569a4a",
-    "url": "/yourAccountant/css/app.bd77f1a1.css"
+    "revision": "8df8a887b11ce76b8abc",
+    "url": "/yourAccountant/css/app.0d0835df.css"
   },
   {
     "revision": "049a938633c4b26ac7ac",
@@ -56,6 +56,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/fonts/fa-solid-900.bea989e8.woff"
   },
   {
+    "revision": "2a63c1138fd67c03decd22a16ad76dec",
+    "url": "/yourAccountant/img/adv-clock.2a63c113.svg"
+  },
+  {
+    "revision": "6d4cdf18ab9b8242ab6568c6d420275a",
+    "url": "/yourAccountant/img/adv-improvement.6d4cdf18.svg"
+  },
+  {
+    "revision": "4ae706b174e539b73e7c66663fdfb77f",
+    "url": "/yourAccountant/img/adv-secret.4ae706b1.svg"
+  },
+  {
+    "revision": "7babc6b9ac6d2b2d90c4f82bde509982",
+    "url": "/yourAccountant/img/adv-solution.7babc6b9.svg"
+  },
+  {
+    "revision": "174a64727d0be4c0540917bbd1089d29",
+    "url": "/yourAccountant/img/adv-student.174a6472.svg"
+  },
+  {
+    "revision": "787978f8a489fd9e27194bd8e1f0f176",
+    "url": "/yourAccountant/img/adv-think.787978f8.svg"
+  },
+  {
     "revision": "0cb5a5c0d251c109458c85c6afeffbaa",
     "url": "/yourAccountant/img/fa-brands-400.0cb5a5c0.svg"
   },
@@ -84,12 +108,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "072b5a1786290852b6cad5ba750b35a2",
+    "revision": "be8df48b983383c9552a4752165b13b2",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "8c6ddfa88c9b80569a4a",
-    "url": "/yourAccountant/js/app.1248766c.js"
+    "revision": "8df8a887b11ce76b8abc",
+    "url": "/yourAccountant/js/app.adf1de5f.js"
   },
   {
     "revision": "049a938633c4b26ac7ac",
