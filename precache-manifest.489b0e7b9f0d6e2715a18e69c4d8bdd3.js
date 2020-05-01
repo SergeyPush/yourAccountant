@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d333a06c6334c72d6168",
-    "url": "/yourAccountant/css/app.58da4033.css"
+    "revision": "bdbadb61170c21e84e47",
+    "url": "/yourAccountant/css/app.a23178a2.css"
   },
   {
     "revision": "049a938633c4b26ac7ac",
@@ -80,6 +80,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/adv-think.787978f8.svg"
   },
   {
+    "revision": "46c2e40f078af06074e7eee18e057288",
+    "url": "/yourAccountant/img/coop-buh.46c2e40f.svg"
+  },
+  {
+    "revision": "703857b828006ecab51bb048c705e5dc",
+    "url": "/yourAccountant/img/coop-demand.703857b8.svg"
+  },
+  {
+    "revision": "e6a49a3a3491d42d62a1f664692b8c89",
+    "url": "/yourAccountant/img/coop-pass.e6a49a3a.svg"
+  },
+  {
+    "revision": "a501d30916bef4b4e4c347298a3c211d",
+    "url": "/yourAccountant/img/coop-sign.a501d309.svg"
+  },
+  {
+    "revision": "82db7a200e76c5b2d113906a86ad705e",
+    "url": "/yourAccountant/img/coop-vector.82db7a20.svg"
+  },
+  {
     "revision": "0cb5a5c0d251c109458c85c6afeffbaa",
     "url": "/yourAccountant/img/fa-brands-400.0cb5a5c0.svg"
   },
@@ -108,12 +128,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "586dc277d48274a5c254a9055106555d",
+    "revision": "eccc83b735135ca97585b5389315d22c",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "d333a06c6334c72d6168",
-    "url": "/yourAccountant/js/app.be46cfe4.js"
+    "revision": "bdbadb61170c21e84e47",
+    "url": "/yourAccountant/js/app.9b0ad661.js"
   },
   {
     "revision": "049a938633c4b26ac7ac",
