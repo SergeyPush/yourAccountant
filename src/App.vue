@@ -1,14 +1,17 @@
 <template>
   <div>
     <Header :language="language" @changeLanguage="handleChangeLanguage($event)"></Header>
+    <Services></Services>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
+import Services from "./components/Services";
 export default {
   components: {
-    Header
+    Header,
+    Services
   },
   data() {
     return {
@@ -37,6 +40,7 @@ export default {
 body {
   font-family: $mainFont;
   font-style: normal;
+  font-weight: normal;
 }
 @media screen and (max-width: 768px) {
   .container {

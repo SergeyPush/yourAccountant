@@ -28,8 +28,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use 'App';
-
 .header {
   background-image: url("../assets/img/header-image.jpg");
   background-repeat: no-repeat;
