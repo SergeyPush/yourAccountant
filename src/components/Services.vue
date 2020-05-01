@@ -128,7 +128,7 @@ export default {
     flex-direction: column;
     align-items: center;
     & > div {
-      max-width: 80%;
+      max-width: 95%;
     }
   }
   .services_tov {

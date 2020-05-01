@@ -2,16 +2,19 @@
   <div>
     <Header :language="language" @changeLanguage="handleChangeLanguage($event)"></Header>
     <Services></Services>
+    <Advantages></Advantages>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
 import Services from "./components/Services";
+import Advantages from "./components/Advantages";
 export default {
   components: {
     Header,
-    Services
+    Services,
+    Advantages
   },
   data() {
     return {
