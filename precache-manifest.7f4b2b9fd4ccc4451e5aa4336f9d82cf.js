@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bdbadb61170c21e84e47",
-    "url": "/yourAccountant/css/app.a23178a2.css"
+    "revision": "798de7d25cd5a39d2d80",
+    "url": "/yourAccountant/css/app.91cf1e03.css"
   },
   {
     "revision": "049a938633c4b26ac7ac",
@@ -80,6 +80,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/adv-think.787978f8.svg"
   },
   {
+    "revision": "74ca1acf67532c0f504633523a077421",
+    "url": "/yourAccountant/img/cont-facebook.74ca1acf.svg"
+  },
+  {
+    "revision": "ca7d7a88ccd05f0d8df4c5d9e35c3e40",
+    "url": "/yourAccountant/img/cont-mail.ca7d7a88.svg"
+  },
+  {
+    "revision": "18ffbd47f05317ef8516e0269ab159cb",
+    "url": "/yourAccountant/img/cont-phone.18ffbd47.svg"
+  },
+  {
     "revision": "46c2e40f078af06074e7eee18e057288",
     "url": "/yourAccountant/img/coop-buh.46c2e40f.svg"
   },
@@ -112,6 +124,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/fa-solid-900.ec763292.svg"
   },
   {
+    "revision": "82704d8f6f6bb600b4f127b72fcdef79",
+    "url": "/yourAccountant/img/footer-heart.82704d8f.svg"
+  },
+  {
     "revision": "d7fd428b06be29f14522170ceebb1786",
     "url": "/yourAccountant/img/green-arrow.d7fd428b.svg"
   },
@@ -128,12 +144,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "eccc83b735135ca97585b5389315d22c",
+    "revision": "4ab32bc76b9ea9bcea81b93318baf8f8",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "bdbadb61170c21e84e47",
-    "url": "/yourAccountant/js/app.9b0ad661.js"
+    "revision": "798de7d25cd5a39d2d80",
+    "url": "/yourAccountant/js/app.b075a1da.js"
   },
   {
     "revision": "049a938633c4b26ac7ac",
