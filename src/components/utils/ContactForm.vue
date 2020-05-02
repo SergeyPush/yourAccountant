@@ -10,7 +10,6 @@
       />
       <textarea
         name
-        id
         cols="30"
         rows="10"
         :placeholder="$t('contactForm.question')"
@@ -59,7 +58,7 @@ export default {
   width: 350px;
   padding: 30px 30px;
   background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  // border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .name,
 .phone,

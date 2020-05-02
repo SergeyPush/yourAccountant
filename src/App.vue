@@ -4,6 +4,9 @@
     <Services></Services>
     <Advantages></Advantages>
     <Cooperation></Cooperation>
+    <Calculator></Calculator>
+    <Contacts></Contacts>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -12,12 +15,18 @@ import Header from "./components/Header";
 import Services from "./components/Services";
 import Advantages from "./components/Advantages";
 import Cooperation from "./components/Cooperation";
+import Contacts from "./components/Contacts";
+import Footer from "./components/Footer";
+import Calculator from "./components/Calculator";
 export default {
   components: {
     Header,
     Services,
     Advantages,
-    Cooperation
+    Cooperation,
+    Contacts,
+    Calculator,
+    Footer
   },
   data() {
     return {
