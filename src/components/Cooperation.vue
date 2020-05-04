@@ -1,5 +1,5 @@
 <template>
-  <section class="cooperation">
+  <section class="cooperation" id="cooperation">
     <div class="container">
       <h2 class="section_title">{{$t('cooperation.title')}}</h2>
       <div class="section_content">

@@ -1,5 +1,5 @@
 <template>
-  <section class="container advantages">
+  <section class="container advantages" id="advantages">
     <h2 class="section_title">{{$t('advantages.title')}}</h2>
 
     <div class="section_content">

@@ -1,5 +1,5 @@
 <template>
-  <section class="calculator container">
+  <section class="calculator container" id="calculator">
     <h2 class="section_title">{{$t("calculator.title")}}</h2>
     <p class="section_subtitle">{{$t("calculator.subtitle")}}</p>
     <div class="section_content">
@@ -14,20 +14,12 @@
         </div>
         <div class="category">
           <p class="category_title">{{$t('calculator.system.title')}}</p>
-          <ul>
-            <li v-for="(item, index,id) in getSystem" :key="index" class="list_item">
-              <input
-                type="checkbox"
-                name="form"
-                :value="item"
-                v-model="formData.system"
-                class="styled-checkbox"
-                :id="`form${id}`"
-              />
-              <label :for="`form${id}`">{{item}}</label>
-            </li>
-          </ul>
+          <label class="radio" v-for="(item, index) in getSystem" :key="index">
+            <input type="radio" name="system" :value="item" v-model="formData.system" />
+            <span>{{item}}</span>
+          </label>
         </div>
+
         <div class="category">
           <p class="category_title">{{$t('calculator.employees.title')}}</p>
           <input type="number" class="input" v-model="formData.employees" />
@@ -86,7 +78,7 @@ export default {
         system: [],
         type: [],
         additionally: [],
-        employees: ""
+        employees: []
       }
     };
   },
@@ -151,7 +143,7 @@ export default {
   color: $accentColor;
 }
 .list_item {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 .input {
   padding: 15px;
@@ -162,11 +154,19 @@ export default {
   width: 100%;
   margin-top: 10px;
 }
+label {
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
 @media screen and (max-width: 770px) {
   .section_content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    & :nth-child(1) {
+      order: 3;
+    }
   }
 }
 </style>

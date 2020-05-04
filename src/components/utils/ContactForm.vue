@@ -1,15 +1,25 @@
 <template>
   <div class="contact-form">
-    <form @submit.prevent="sendEmail(formdata)">
+    <form @submit.prevent="sendEmail({formdata, parent})">
+      <span
+        v-if="!validators.formIsValid&&!validators.nameIsValid"
+        class="validation"
+      >{{$t('contactForm.validatename')}}</span>
       <input type="text" :placeholder="$t('contactForm.name')" class="name" v-model="formdata.name" />
+      <span
+        v-if="!validators.formIsValid&&!validators.phoneIsValid"
+        class="validation"
+      >{{$t('contactForm.validatephone')}}</span>
       <input
         type="text"
-        :placeholder="$t('contactForm.phone')"
+        placeholder="+38(0__)___-__-__"
         class="phone"
         v-model="formdata.phone"
+        v-mask="'+38(0##)###-##-##'"
+        ref="phone"
       />
+
       <textarea
-        name
         cols="30"
         rows="10"
         :placeholder="$t('contactForm.question')"
@@ -19,11 +29,12 @@
       <button class="submit">{{$t('contactForm.submitButton')}}</button>
       <p class="data">{{$t('contactForm.yourData')}}</p>
     </form>
+    <app-success v-if="messageIsDisplayed"></app-success>
   </div>
 </template>
 
 <script>
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 
 export default {
   data() {
@@ -32,22 +43,56 @@ export default {
         name: "",
         phone: "",
         question: ""
-      }
+      },
+      parent: this.$parent.$data.formData,
+      validators: {
+        nameIsValid: false,
+        phoneIsValid: false,
+        formIsValid: true
+      },
+      messageIsDisplayed: false
     };
   },
   methods: {
-    sendEmail: data => {
-      emailjs
-        .send("gmail", "template_sbRg0J0U", data, "user_5p0b4IT3bwkF3nOhn3S5L")
-        .then(
-          result => {
-            console.log("SUCCESS!", result.status, result.text);
-          },
-          error => {
-            console.log("FAILED...", error);
-          }
-        );
+    validateForm() {
+      this.validators.formIsValid = false;
+      if (this.formdata.name.length > 0) {
+        this.validators.nameIsValid = true;
+      }
+      if (this.formdata.phone.length === 17) {
+        this.validators.phoneIsValid = true;
+      }
+      this.validators.formIsValid =
+        this.validators.nameIsValid && this.validators.phoneIsValid;
+    },
+    displayMessage() {
+      this.messageIsDisplayed = true;
+      setTimeout(() => {
+        this.messageIsDisplayed = false;
+      }, 2000);
+    },
+
+    sendEmail(data) {
+      this.validateForm();
+      if (this.validators.formIsValid === false) {
+        return;
+      }
+
+      this.displayMessage();
       console.log(data);
+      // emailjs
+      //   .send("gmail", "template_sbRg0J0U", data, "user_5p0b4IT3bwkF3nOhn3S5L")
+      //   .then(
+      //     result => {
+      //       console.log("SUCCESS!", result.status, result.text);
+      //       this.formdata.name = "";
+      //       this.formdata.phone = "";
+      //       this.formdata.question = "";
+      //     },
+      //     error => {
+      //       console.log("FAILED...", error);
+      //     }
+      //   );
     }
   }
 };
@@ -58,7 +103,6 @@ export default {
   width: 350px;
   padding: 30px 30px;
   background: rgba(255, 255, 255, 0.6);
-  // border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .name,
 .phone,
@@ -96,10 +140,13 @@ export default {
   border: none;
 }
 .data {
-  font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 16px;
   color: rgba(0, 0, 0, 0.6);
+}
+.validation {
+  color: red;
+  font-size: 10px;
 }
 </style>

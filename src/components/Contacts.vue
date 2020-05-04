@@ -1,5 +1,5 @@
 <template>
-  <section class="contact">
+  <section class="contact" id="contacts">
     <div class="container">
       <h2 class="section_title">{{$t('contacts.title')}}</h2>
       <div class="section_content">

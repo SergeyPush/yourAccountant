@@ -6,20 +6,31 @@
     </div>
     <nav class="navigation">
       <ul class="menu__list">
-        <li v-for="(item, index) in dafaultData" :key="index" class="menu__item">
+        <li v-for="(item, index) in dafaultData" :key="index" class="menu__item header-item">
           <a :href="item.link" class="menu__link">{{item.text}}</a>
         </li>
       </ul>
-
-      <div class="language">
+      <div class="language header-item">
         <p @click="changeLocale">{{language}}</p>
       </div>
       <div class="socials">
-        <div class="phone">
+        <div class="phone header-item">
           <i class="fas fa-phone"></i>
+          <ul class="sub_menu">
+            <li class="sub_menu-item">
+              <i class="fas fa-phone"></i>
+              <span>&nbsp; +38(097)777-77-77</span>
+            </li>
+            <li class="sub_menu-item">
+              <i class="fab fa-skype"></i>
+              <span>maryna_k</span>
+            </li>
+          </ul>
         </div>
-        <div class="facebook">
-          <i class="fab fa-facebook-f"></i>
+        <div class="facebook header-item">
+          <a href="https://facebook.com/taxeshelp" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
         </div>
       </div>
     </nav>
@@ -50,11 +61,11 @@ export default {
   computed: {
     dafaultData() {
       return [
-        { text: this.$t("menu.services"), link: "#1" },
-        { text: this.$t("menu.quality"), link: "#2" },
-        { text: this.$t("menu.advantages"), link: "#3" },
-        { text: this.$t("menu.calculator"), link: "#4" },
-        { text: this.$t("menu.contacts"), link: "#5" }
+        { text: this.$t("menu.services"), link: "#services" },
+        { text: this.$t("menu.quality"), link: "#advantages" },
+        { text: this.$t("menu.advantages"), link: "#cooperation" },
+        { text: this.$t("menu.calculator"), link: "#calculator" },
+        { text: this.$t("menu.contacts"), link: "#contacts" }
       ];
     }
   },
@@ -155,6 +166,39 @@ export default {
 }
 .phone {
   margin-right: 1rem;
+  position: relative;
+}
+.sub_menu {
+  padding: 10px 20px 10px 20px;
+  display: none;
+  position: absolute;
+  left: -200px;
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 0.9;
+  border-radius: 10px;
+  & > li {
+    color: $mainFontColor;
+    padding: 5px;
+    & > i {
+      margin-right: 5px;
+    }
+  }
+}
+
+.phone:hover .sub_menu {
+  display: block;
+}
+.header-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.sub_menu-item {
+  display: flex;
+  min-width: 200px;
+  & i {
+    color: $mainFontColor;
+    font-size: 16px;
+  }
 }
 
 .hamburger {
