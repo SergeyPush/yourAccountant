@@ -23,6 +23,7 @@ export default {};
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 8px 8px 5px -2px rgba(0, 0, 0, 0.49);
 }
 .icon {
   color: #4ebd6f;

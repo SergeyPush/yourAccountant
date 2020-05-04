@@ -34,7 +34,7 @@
 </template>
 
 <script>
-// import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
 
 export default {
   data() {
@@ -79,20 +79,20 @@ export default {
       }
 
       this.displayMessage();
-      console.log(data);
-      // emailjs
-      //   .send("gmail", "template_sbRg0J0U", data, "user_5p0b4IT3bwkF3nOhn3S5L")
-      //   .then(
-      //     result => {
-      //       console.log("SUCCESS!", result.status, result.text);
-      //       this.formdata.name = "";
-      //       this.formdata.phone = "";
-      //       this.formdata.question = "";
-      //     },
-      //     error => {
-      //       console.log("FAILED...", error);
-      //     }
-      //   );
+
+      emailjs
+        .send("gmail", "template_sbRg0J0U", data, "user_5p0b4IT3bwkF3nOhn3S5L")
+        .then(
+          result => {
+            console.log("SUCCESS!", result.status, result.text);
+            this.formdata.name = "";
+            this.formdata.phone = "";
+            this.formdata.question = "";
+          },
+          error => {
+            console.log("FAILED...", error);
+          }
+        );
     }
   }
 };
