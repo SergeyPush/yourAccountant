@@ -1,11 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "681b37138c714a94ea08",
-    "url": "/yourAccountant/css/app.b0aca159.css"
+    "revision": "e9daab809d3ccd6d899c",
+    "url": "/yourAccountant/css/app.7886914d.css"
   },
   {
     "revision": "9df3a56ff09a93e50a76",
     "url": "/yourAccountant/css/chunk-vendors.eea42e24.css"
+  },
+  {
+    "revision": "4e0c44f61654dee68e48d95c7ee0921c",
+    "url": "/yourAccountant/favicon.png"
   },
   {
     "revision": "13685372945d816a2b474fc082fd9aaa",
@@ -144,12 +148,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "4cf16b7c2dc69bc670d7f8ea6e2a5298",
+    "revision": "d7192da924c176aa66627fa0c583d5d6",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "681b37138c714a94ea08",
-    "url": "/yourAccountant/js/app.8b22458a.js"
+    "revision": "e9daab809d3ccd6d899c",
+    "url": "/yourAccountant/js/app.f16b4261.js"
   },
   {
     "revision": "9df3a56ff09a93e50a76",
