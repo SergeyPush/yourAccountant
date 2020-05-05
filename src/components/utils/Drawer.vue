@@ -3,6 +3,12 @@
     <div class="drawer animation">
       <i class="fas fa-times close" @click="closeMenu"></i>
 
+      <div class="drawer_top">
+        <a href="https://facebook.com/taxeshelp" target="_blank">
+          <i class="fab fa-facebook-f facebook"></i>
+        </a>
+        <p class="language" @click="changeLocale">{{language}}</p>
+      </div>
       <nav class="navigation">
         <ul class="menu__list">
           <li v-for="(item, index) in items" :key="index" class="menu__item">
@@ -20,7 +26,7 @@
 
 <script>
 export default {
-  props: ["closeMenu", "items"]
+  props: ["closeMenu", "items", "language", "changeLocale"]
 };
 </script>
 
@@ -43,6 +49,7 @@ export default {
   right: 0;
   padding: 20px;
   z-index: 3;
+  opacity: 0.92;
 }
 .animation {
   animation: appear 0.3s ease-out;
@@ -77,9 +84,6 @@ export default {
   padding-left: 30px;
 }
 .menu__link {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
   font-size: 20px;
   color: #ffffff;
   &:hover {
@@ -87,7 +91,26 @@ export default {
   }
 }
 .drawer_phone {
+  font-size: 18px;
   margin: 30px;
+  color: #ffffff;
+  & > i {
+    margin-right: 5px;
+  }
+}
+.drawer_top {
+  margin-left: 30px;
+  display: flex;
+  margin-top: 20px;
+}
+.facebook {
+  font-size: 22px;
+  color: #ffffff;
+  margin-right: 50px;
+}
+.language {
+  font-weight: 500;
+  font-size: 22px;
   color: #ffffff;
 }
 </style>

@@ -38,7 +38,13 @@
     <div class="hamburger">
       <i class="fas fa-bars" @click="handleOpenMenu"></i>
     </div>
-    <Drawer v-if="menuIsOpened" :closeMenu="handleCloseMenu" :items="dafaultData" />
+    <Drawer
+      v-if="menuIsOpened"
+      :closeMenu="handleCloseMenu"
+      :items="dafaultData"
+      :language="language"
+      :changeLocale="changeLocale"
+    />
   </div>
 </template>
 
@@ -169,11 +175,15 @@ export default {
   position: relative;
 }
 .sub_menu {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 10px 10px 10px;
   display: none;
   position: absolute;
-  left: -200px;
+  min-width: 190px;
+  left: -166px;
+
   background-color: rgba(255, 255, 255, 1);
+  box-shadow: 8px 8px 5px -2px rgba(0, 0, 0, 0.2);
+
   opacity: 0.9;
   border-radius: 10px;
   & > li {
@@ -194,7 +204,7 @@ export default {
 }
 .sub_menu-item {
   display: flex;
-  min-width: 200px;
+  // min-width: 200px;
   & i {
     color: $mainFontColor;
     font-size: 16px;

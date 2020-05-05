@@ -3,7 +3,7 @@
     <h2 class="section_title">{{$t("calculator.title")}}</h2>
     <p class="section_subtitle">{{$t("calculator.subtitle")}}</p>
     <div class="section_content">
-      <ContactForm></ContactForm>
+      <ContactForm :buttonText="$t('contactForm.buttonSecond')"></ContactForm>
       <div class="part1 parts">
         <div class="category">
           <p class="category_title">{{$t('calculator.form.title')}}</p>

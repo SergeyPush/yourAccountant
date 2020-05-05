@@ -1,23 +1,33 @@
 <template>
   <div class="contact-form">
     <form @submit.prevent="sendEmail({formdata, parent})">
-      <span
-        v-if="!validators.formIsValid&&!validators.nameIsValid"
-        class="validation"
-      >{{$t('contactForm.validatename')}}</span>
-      <input type="text" :placeholder="$t('contactForm.name')" class="name" v-model="formdata.name" />
-      <span
-        v-if="!validators.formIsValid&&!validators.phoneIsValid"
-        class="validation"
-      >{{$t('contactForm.validatephone')}}</span>
-      <input
-        type="text"
-        placeholder="+38(0__)___-__-__"
-        class="phone"
-        v-model="formdata.phone"
-        v-mask="'+38(0##)###-##-##'"
-        ref="phone"
-      />
+      <div class="input-form">
+        <span
+          v-if="!validators.formIsValid&&!validators.nameIsValid"
+          class="validation"
+        >{{$t('contactForm.validatename')}}</span>
+        <input
+          type="text"
+          :placeholder="$t('contactForm.name')"
+          class="name"
+          v-model="formdata.name"
+        />
+      </div>
+
+      <div class="input-form">
+        <span
+          v-if="!validators.formIsValid&&!validators.phoneIsValid"
+          class="validation"
+        >{{$t('contactForm.validatephone')}}</span>
+        <input
+          type="text"
+          placeholder="+38(0__)___-__-__"
+          class="phone"
+          v-model="formdata.phone"
+          v-mask="'+38(0##)###-##-##'"
+          ref="phone"
+        />
+      </div>
 
       <textarea
         cols="30"
@@ -26,7 +36,7 @@
         class="question"
         v-model="formdata.question"
       ></textarea>
-      <button class="submit">{{$t('contactForm.submitButton')}}</button>
+      <button class="submit">{{buttonText}}</button>
       <p class="data">{{$t('contactForm.yourData')}}</p>
     </form>
     <app-success v-if="messageIsDisplayed"></app-success>
@@ -37,6 +47,7 @@
 import emailjs from "emailjs-com";
 
 export default {
+  props: ["buttonText"],
   data() {
     return {
       formdata: {
@@ -145,8 +156,13 @@ export default {
   line-height: 16px;
   color: rgba(0, 0, 0, 0.6);
 }
+.input-form {
+  position: relative;
+}
 .validation {
-  color: red;
-  font-size: 10px;
+  color: #ec7063;
+  font-size: 12px;
+  position: absolute;
+  top: -14px;
 }
 </style>

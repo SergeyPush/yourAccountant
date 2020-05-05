@@ -6,7 +6,7 @@
         <h1 class="hero__title">{{$t("header.title")}}</h1>
         <p class="hero__desc">{{$t("header.description")}}</p>
       </div>
-      <ContactForm></ContactForm>
+      <ContactForm :buttonText="$t('contactForm.submitButton')"></ContactForm>
     </div>
   </div>
 </template>
