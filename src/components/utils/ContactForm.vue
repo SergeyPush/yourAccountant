@@ -149,6 +149,11 @@ export default {
   text-transform: uppercase;
   cursor: pointer;
   border: none;
+  &:hover {
+    opacity: 1;
+    background: #e08b41;
+    transition: all 0.3s ease-out;
+  }
 }
 .data {
   font-weight: 300;

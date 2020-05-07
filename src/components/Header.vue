@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" id="#top">
     <Menu @changeLanguage="changeLanguage($event)"></Menu>
     <div class="content container">
       <div class="hero">

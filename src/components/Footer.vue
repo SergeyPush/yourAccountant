@@ -44,7 +44,7 @@ export default {
   margin-left: 10px;
 }
 .company {
-  font-family: Asap;
+  font-family: "Asap", sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #3ab882;

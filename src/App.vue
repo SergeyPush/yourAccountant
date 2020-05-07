@@ -7,6 +7,7 @@
     <Calculator></Calculator>
     <Contacts></Contacts>
     <Footer></Footer>
+    <OnTop></OnTop>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Cooperation from "./components/Cooperation";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 import Calculator from "./components/Calculator";
+import OnTop from "./components/utils/OnTop";
 export default {
   components: {
     Header,
@@ -26,7 +28,8 @@ export default {
     Cooperation,
     Contacts,
     Calculator,
-    Footer
+    Footer,
+    OnTop
   },
   data() {
     return {
@@ -35,6 +38,7 @@ export default {
   },
   methods: {
     handleChangeLanguage(lang) {
+      localStorage.setItem("language", lang);
       this.$i18n.locale = lang;
     }
   }

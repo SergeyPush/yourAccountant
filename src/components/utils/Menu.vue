@@ -56,7 +56,7 @@ export default {
   components: {
     Drawer
   },
-  props: ["lanuage"],
+
   data() {
     return {
       menuIsOpened: false,
@@ -86,12 +86,18 @@ export default {
       }
       this.menuIsOpened = false;
     },
-    changeLocale(e) {
+    changeLocale() {
+      localStorage.setItem("language", this.language);
+      this.$emit("changeLanguage", this.language);
       this.language === "rus"
         ? (this.language = "ukr")
         : (this.language = "rus");
-
-      this.$emit("changeLanguage", e.target.innerText);
+    }
+  },
+  mounted() {
+    const language = localStorage.getItem("language");
+    if (language) {
+      this.changeLocale(language);
     }
   }
 };
