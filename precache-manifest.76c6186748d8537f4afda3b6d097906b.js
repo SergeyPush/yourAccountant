@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e9daab809d3ccd6d899c",
-    "url": "/yourAccountant/css/app.7886914d.css"
+    "revision": "e61facc2d56624e07403",
+    "url": "/yourAccountant/css/app.68ec88e4.css"
   },
   {
     "revision": "9df3a56ff09a93e50a76",
@@ -148,12 +148,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "d7192da924c176aa66627fa0c583d5d6",
+    "revision": "461e90078467e1ea490268033a03e46d",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "e9daab809d3ccd6d899c",
-    "url": "/yourAccountant/js/app.f16b4261.js"
+    "revision": "e61facc2d56624e07403",
+    "url": "/yourAccountant/js/app.6714312e.js"
   },
   {
     "revision": "9df3a56ff09a93e50a76",
