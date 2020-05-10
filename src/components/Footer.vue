@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" v-scroll-reveal.reset="{duration:1000}">
     <div class="section_content container">
       <p class="sign">Made with</p>
       <img :src="heart" class="heart" />
@@ -44,7 +44,7 @@ export default {
   margin-left: 10px;
 }
 .company {
-  font-family: "Asap", sans-serif;
+  font-family: "PLay", sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #3ab882;

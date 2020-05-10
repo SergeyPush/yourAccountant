@@ -1,5 +1,5 @@
 <template>
-  <section class="cooperation" id="cooperation">
+  <section class="cooperation" id="cooperation" v-scroll-reveal.reset="{duration:1000}">
     <div class="container">
       <h2 class="section_title">{{$t('cooperation.title')}}</h2>
       <div class="section_content">
@@ -36,13 +36,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/_variables.scss";
 .cooperation {
   background-color: #222831;
   padding-top: 30px;
   padding-bottom: 40px;
 }
 .section_title {
-  font-size: 40px;
+  font-family: $titleFont;
+  font-size: calc(20px + 1.5vmax);
   line-height: 35px;
   text-align: center;
   letter-spacing: 0.02em;

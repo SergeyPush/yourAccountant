@@ -19,11 +19,16 @@
           <ul class="sub_menu">
             <li class="sub_menu-item">
               <i class="fas fa-phone"></i>
-              <span>&nbsp; +38(097)777-77-77</span>
+              <span>+38(099)381-11-18</span>
             </li>
             <li class="sub_menu-item">
               <i class="fab fa-skype"></i>
-              <span>maryna_k</span>
+
+              <a class="submenu_link" href="skype:spushkovskiy?chat">maryna_k</a>
+            </li>
+            <li class="sub_menu-item">
+              <i class="far fa-envelope"></i>
+              <a class="submenu_link" href="mailto:0993811118@ukr.net">0993811118@ukr.net</a>
             </li>
           </ul>
         </div>
@@ -61,7 +66,7 @@ export default {
     return {
       menuIsOpened: false,
       face,
-      language: "rus"
+      language: "ukr"
     };
   },
   computed: {
@@ -97,7 +102,8 @@ export default {
   mounted() {
     const language = localStorage.getItem("language");
     if (language) {
-      this.changeLocale(language);
+      this.language = language;
+      this.changeLocale();
     }
   }
 };
@@ -186,6 +192,7 @@ export default {
   position: absolute;
   min-width: 190px;
   left: -166px;
+  z-index: 999;
 
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 8px 8px 5px -2px rgba(0, 0, 0, 0.2);
@@ -199,6 +206,9 @@ export default {
       margin-right: 5px;
     }
   }
+}
+.submenu_link {
+  color: $mainFontColor;
 }
 
 .phone:hover .sub_menu {

@@ -111,7 +111,7 @@ export default {
 
 <style lang="scss" scoped>
 .contact-form {
-  width: 350px;
+  max-width: 350px;
   padding: 30px 30px;
   background: rgba(255, 255, 255, 0.6);
 }

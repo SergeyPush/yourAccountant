@@ -1,5 +1,5 @@
 <template>
-  <section class="container advantages" id="advantages">
+  <section class="container advantages" id="advantages" v-scroll-reveal.reset="{duration:1000}">
     <h2 class="section_title">{{$t('advantages.title')}}</h2>
 
     <div class="section_content">
@@ -44,7 +44,7 @@ export default {
 .section_title {
   font-family: $titleFont;
   text-align: center;
-  font-size: 40px;
+  font-size: calc(20px + 1.5vmax);
   color: $mainFontColor;
   margin-bottom: 12%;
   margin-top: 8%;

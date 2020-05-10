@@ -1,13 +1,15 @@
 <template>
-  <div class="header" id="#top">
+  <div class="header" id="#top" v-scroll-reveal.reset="{duration:1000}">
     <Menu @changeLanguage="changeLanguage($event)"></Menu>
-    <div class="content container">
-      <div class="hero">
-        <h1 class="hero__title">{{$t("header.title")}}</h1>
-        <p class="hero__desc">{{$t("header.description")}}</p>
+    <transition name="appear" appear>
+      <div class="content container">
+        <div class="hero">
+          <h1 class="hero__title">{{$t("header.title")}}</h1>
+          <p class="hero__desc">{{$t("header.description")}}</p>
+        </div>
+        <ContactForm :buttonText="$t('contactForm.submitButton')"></ContactForm>
       </div>
-      <ContactForm :buttonText="$t('contactForm.submitButton')"></ContactForm>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -28,6 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/_variables.scss";
 .header {
   background-image: url("../assets/img/header-image.jpg");
   background-repeat: no-repeat;
@@ -40,15 +43,20 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  opacity: 1;
 }
+
 .hero {
-  max-width: 460px;
-  padding-top: 100px;
+  max-width: 450px;
+  padding-top: 10%;
+  margin-right: 10px;
 }
 
 .hero__title {
-  font-weight: 900;
-  font-size: 48px;
+  font-family: $titleFont;
+  font-weight: 500;
+  font-size: calc(20px + 1.8vmax);
+
   line-height: 120%;
   display: flex;
   align-items: center;
@@ -69,6 +77,26 @@ export default {
   }
   .hero {
     margin-bottom: 20px;
+  }
+}
+
+.appear-enter-active {
+  animation: animate 1s ease-in;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY();
   }
 }
 </style>

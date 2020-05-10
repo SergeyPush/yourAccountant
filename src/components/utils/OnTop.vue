@@ -1,9 +1,11 @@
 <template>
-  <div :class="['top_button', displayButton?'active':'']">
-    <a href="#top" class="link">
-      <i class="fas fa-angle-up arrow"></i>
-    </a>
-  </div>
+  <transition name="animate">
+    <div :class="['top_button', displayButton?'active':'inactive']">
+      <a href="#top" class="link">
+        <i class="fas fa-angle-up arrow"></i>
+      </a>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -15,7 +17,7 @@ export default {
     };
   },
 
-  mounted() {
+  beforeMount() {
     window.addEventListener("scroll", () => {
       this.scrollPosition = window.scrollY;
       if (this.scrollPosition > 600) {
@@ -41,8 +43,10 @@ export default {
   bottom: 100px;
   right: 5%;
   border-radius: 5px;
-  display: none;
-  &:hover {
+  box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
+
+  &:hover,
+  &:active {
     transition: background-color 0.2s linear;
     background-color: $darkColor;
   }
@@ -61,8 +65,21 @@ export default {
   text-align: center;
 }
 .active {
-  display: block;
   animation: appear 0.3s ease-in;
+}
+.inactive {
+  right: -100px;
+  animation: leave 0.4s ease-out;
+}
+
+@keyframes leave {
+  from {
+    right: 5%;
+  }
+  to {
+    right: -100px;
+    opacity: 0;
+  }
 }
 
 @keyframes appear {
@@ -73,6 +90,15 @@ export default {
   100% {
     opacity: 1;
     right: 6%;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    right: -100px;
   }
 }
 </style>

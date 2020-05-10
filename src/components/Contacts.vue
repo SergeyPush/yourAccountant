@@ -1,5 +1,5 @@
 <template>
-  <section class="contact" id="contacts">
+  <section class="contact" id="contacts" v-scroll-reveal.reset="{duration:1000}">
     <div class="container">
       <h2 class="section_title">{{$t('contacts.title')}}</h2>
       <div class="section_content">
@@ -26,11 +26,7 @@ export default {
   data() {
     return {
       images: [facebook, phone, mail],
-      subtitle: [
-        "Your accountant",
-        "+38(097)777 77 77",
-        "youraccountant@gmail.com"
-      ]
+      subtitle: ["Your accountant", "+38(099)381-11-18‬", "0993811118@ukr.net"]
     };
   },
   computed: {
@@ -46,17 +42,17 @@ export default {
 
 .contact {
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 70px;
   background-color: #fafbfc;
 }
 .section_title {
   font-family: $titleFont;
-  font-size: 40px;
+  font-size: calc(20px + 1.5vmax);
   text-align: center;
   letter-spacing: 0.02em;
   color: $mainFontColor;
-  margin-top: 8%;
-  margin-bottom: 10%;
+  margin-top: 6%;
+  margin-bottom: 8%;
 }
 .section_content {
   display: flex;

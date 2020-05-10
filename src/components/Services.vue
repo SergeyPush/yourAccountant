@@ -1,5 +1,5 @@
 <template>
-  <section class="services" id="services">
+  <section class="services" id="services" v-scroll-reveal.reset="{duration:1000}">
     <div class="container">
       <h2 class="section_title">{{$t('services.header')}}</h2>
       <div class="services_items">
@@ -58,16 +58,17 @@ export default {
 
 .services {
   background-color: #f2f2f2;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 40px;
 }
 .section_title {
   text-align: center;
   font-family: $titleFont;
-  font-size: 40px;
+  font-size: calc(20px + 1.5vmax);
   text-align: center;
   color: $mainFontColor;
-  margin-bottom: 40px;
+  margin-bottom: 6%;
+  margin-top: 6%;
 }
 .services_items {
   display: flex;

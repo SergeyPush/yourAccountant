@@ -1,5 +1,5 @@
 <template>
-  <section class="calculator container" id="calculator">
+  <section class="calculator container" id="calculator" v-scroll-reveal.reset="{duration:1000}">
     <h2 class="section_title">{{$t("calculator.title")}}</h2>
     <p class="section_subtitle">{{$t("calculator.subtitle")}}</p>
     <div class="section_content">
@@ -108,7 +108,7 @@ export default {
 }
 .section_title {
   font-family: $titleFont;
-  font-size: 40px;
+  font-size: calc(20px + 1.5vmax);
   text-align: center;
   letter-spacing: 0.02em;
   color: $mainFontColor;
@@ -136,6 +136,9 @@ export default {
 .category {
   min-height: 120px;
   margin-bottom: 30px;
+}
+.category:last-child {
+  margin-bottom: 0;
 }
 .category_title {
   font-size: 20px;

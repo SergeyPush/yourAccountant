@@ -61,9 +61,12 @@ body {
   font-style: normal;
   font-weight: normal;
 }
+
 @media screen and (max-width: 768px) {
   .container {
     max-width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 </style>
