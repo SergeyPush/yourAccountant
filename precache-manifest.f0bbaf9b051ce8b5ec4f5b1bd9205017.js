@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58540e6892e6b05de0bd",
-    "url": "/yourAccountant/css/app.d9da349b.css"
+    "revision": "1c66820d1c904c5a498b",
+    "url": "/yourAccountant/css/app.3246c3c7.css"
   },
   {
     "revision": "3256f48c669de88cb506",
@@ -140,6 +140,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/header-image.1ad3043b.jpg"
   },
   {
+    "revision": "49a473c4983832a53672722cd4439959",
+    "url": "/yourAccountant/img/header-image1.49a473c4.jpg"
+  },
+  {
+    "revision": "eb911cbacd2531d0095c20bc75fba4f7",
+    "url": "/yourAccountant/img/header-image2.eb911cba.jpg"
+  },
+  {
+    "revision": "06d19bc70ebf3e76876a314fd48c6dc9",
+    "url": "/yourAccountant/img/header-image3.06d19bc7.jpg"
+  },
+  {
+    "revision": "d4b6a229d7ae188fd8510dfc7a797da2",
+    "url": "/yourAccountant/img/header-image4.d4b6a229.jpg"
+  },
+  {
+    "revision": "642ec6e9133efdd1bff3006327765d7b",
+    "url": "/yourAccountant/img/header-image5.642ec6e9.jpg"
+  },
+  {
     "revision": "6b277b8ccd20e1f42caa04d748718cda",
     "url": "/yourAccountant/img/isolated-monochrome-white.6b277b8c.svg"
   },
@@ -148,12 +168,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "b278be345c5ca51317791ae7ee74dd7a",
+    "revision": "3b3a8661003c286b9d187fa994dd38c9",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "58540e6892e6b05de0bd",
-    "url": "/yourAccountant/js/app.90def7cc.js"
+    "revision": "1c66820d1c904c5a498b",
+    "url": "/yourAccountant/js/app.d5dc9d06.js"
   },
   {
     "revision": "3256f48c669de88cb506",
