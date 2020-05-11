@@ -1,5 +1,10 @@
 <template>
-  <div class="header" id="#top" v-scroll-reveal.reset="{duration:1000}">
+  <div
+    class="header"
+    id="#top"
+    v-scroll-reveal.reset="{duration:1000}"
+    :style="{backgroundImage: `url(${getRandomImage})`}"
+  >
     <Menu @changeLanguage="changeLanguage($event)"></Menu>
     <transition name="appear" appear>
       <div class="content container">
@@ -16,14 +21,34 @@
 <script>
 import Menu from "./utils/Menu";
 import ContactForm from "./utils/ContactForm";
+
+import img from "@/assets/img/header-image.jpg";
+import img1 from "@/assets/img/header-image1.jpg";
+import img2 from "@/assets/img/header-image2.jpg";
+import img3 from "@/assets/img/header-image3.jpg";
+import img4 from "@/assets/img/header-image4.jpg";
+import img5 from "@/assets/img/header-image5.jpg";
+
 export default {
   components: {
     Menu,
     ContactForm
   },
+  data() {
+    return {
+      images: [img, img1, img2, img3, img4, img5],
+      randomImage: this.getRandomImage
+    };
+  },
   methods: {
     changeLanguage(lang) {
       this.$emit("changeLanguage", lang);
+    }
+  },
+  computed: {
+    getRandomImage() {
+      const imageIndex = Math.floor(Math.random() * this.images.length);
+      return this.images[imageIndex];
     }
   }
 };
@@ -32,10 +57,9 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/_variables.scss";
 .header {
-  background-image: url("../assets/img/header-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center 90%;
   padding-bottom: 40px;
 }
 .content {

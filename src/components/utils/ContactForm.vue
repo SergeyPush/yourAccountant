@@ -21,10 +21,10 @@
         >{{$t('contactForm.validatephone')}}</span>
         <input
           type="text"
-          placeholder="+38(0__)___-__-__"
+          :placeholder="$t('contactForm.phone')"
           class="phone"
           v-model="formdata.phone"
-          v-mask="'+38(0##)###-##-##'"
+          v-mask="'+38(###)###-##-##'"
           ref="phone"
         />
       </div>
@@ -110,6 +110,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/_variables.scss";
 .contact-form {
   max-width: 350px;
   padding: 30px 30px;
@@ -142,7 +143,7 @@ export default {
 }
 .submit {
   padding: 15px;
-  background: #eaa76c;
+  background: $accentColor;
   font-weight: bold;
   font-size: 20px;
   color: #ffffff;

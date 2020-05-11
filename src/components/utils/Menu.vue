@@ -112,6 +112,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/scss/_variables.scss";
+%transition {
+  transition: color 0.2s ease-in-out;
+}
+
 .logo {
   display: flex;
   flex-direction: row;
@@ -153,17 +157,20 @@ export default {
   font-weight: 500;
   font-size: 16px;
   color: #ffffff;
+  @extend %transition;
   &:hover {
     color: $accentColor;
   }
 }
+
 .language {
   font-weight: 500;
   font-size: 16px;
   color: #ffffff;
   margin-right: 1.5rem;
+  cursor: pointer;
+  @extend %transition;
   &:hover {
-    cursor: pointer;
     color: $accentColor;
   }
 }
@@ -176,6 +183,7 @@ export default {
   i {
     font-size: 20px;
     color: #ffffff;
+    @extend %transition;
     &:hover {
       color: $accentColor;
       cursor: pointer;
@@ -193,12 +201,12 @@ export default {
   min-width: 190px;
   left: -166px;
   z-index: 999;
-
   background-color: rgba(255, 255, 255, 1);
-  box-shadow: 8px 8px 5px -2px rgba(0, 0, 0, 0.2);
-
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   opacity: 0.9;
   border-radius: 10px;
+  animation: appear 0.5s ease-in-out;
+
   & > li {
     color: $mainFontColor;
     padding: 5px;
@@ -213,6 +221,7 @@ export default {
 
 .phone:hover .sub_menu {
   display: block;
+  animation: appear 0.5s ease-in-out;
 }
 .header-item {
   padding-top: 10px;
@@ -220,7 +229,7 @@ export default {
 }
 .sub_menu-item {
   display: flex;
-  // min-width: 200px;
+
   & i {
     color: $mainFontColor;
     font-size: 16px;
@@ -236,6 +245,16 @@ export default {
       color: $accentColor;
       cursor: pointer;
     }
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    display: block;
+    opacity: 0.9;
   }
 }
 

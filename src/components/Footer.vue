@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer" v-scroll-reveal.reset="{duration:1000}">
+  <footer class="footer" v-scroll-reveal.reset="{duration:1000, mobile:false}">
     <div class="section_content container">
       <p class="sign">Made with</p>
       <img :src="heart" class="heart" />
