@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6eb8bbdecf74fc7201b9",
-    "url": "/yourAccountant/css/app.ac9562fa.css"
+    "revision": "a4992769345dd997ed19",
+    "url": "/yourAccountant/css/app.1cc71e96.css"
   },
   {
     "revision": "3256f48c669de88cb506",
@@ -140,12 +140,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/header-image.1ad3043b.jpg"
   },
   {
-    "revision": "49a473c4983832a53672722cd4439959",
-    "url": "/yourAccountant/img/header-image1.49a473c4.jpg"
-  },
-  {
-    "revision": "eb911cbacd2531d0095c20bc75fba4f7",
-    "url": "/yourAccountant/img/header-image2.eb911cba.jpg"
+    "revision": "f9860d0e547f6641b738628eac187d12",
+    "url": "/yourAccountant/img/header-image1.f9860d0e.jpg"
   },
   {
     "revision": "6b277b8ccd20e1f42caa04d748718cda",
@@ -156,12 +152,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "6ff8a154c574ecdc8cd67b352bc81b5f",
+    "revision": "aa99d44e085e596019d7b14e41ca70f7",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "6eb8bbdecf74fc7201b9",
-    "url": "/yourAccountant/js/app.61ce547d.js"
+    "revision": "a4992769345dd997ed19",
+    "url": "/yourAccountant/js/app.2c901b44.js"
   },
   {
     "revision": "3256f48c669de88cb506",
