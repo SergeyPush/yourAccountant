@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/yourAccountant/precache-manifest.2bd5263a39cddeee61c8f2736ebbbe35.js"
+  "/yourAccountant/precache-manifest.f8fa6e7043a2e3daa8388fc077e0f4e2.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "your-accountant"});
