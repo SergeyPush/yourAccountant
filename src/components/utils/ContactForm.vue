@@ -99,6 +99,13 @@ export default {
             this.formdata.name = "";
             this.formdata.phone = "";
             this.formdata.question = "";
+            this.$parent.$data.formData = {
+              form: [],
+              system: [],
+              type: [],
+              additionally: [],
+              employees: []
+            };
           },
           error => {
             console.log("FAILED...", error);
@@ -124,13 +131,23 @@ export default {
   width: 100%;
   margin-bottom: 25px;
 }
+
+.name,
+.phone,
+.question {
+  &::placeholder {
+    font-family: $mainFont;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.45);
+  }
+}
 .name,
 .phone {
   padding: 15px;
   font-weight: 300;
   font-size: 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .question {
@@ -139,12 +156,11 @@ export default {
   font-size: 15px;
   resize: none;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 .submit {
   padding: 15px;
   background: $accentColor;
-  font-weight: bold;
   font-size: 20px;
   color: #ffffff;
   text-transform: uppercase;

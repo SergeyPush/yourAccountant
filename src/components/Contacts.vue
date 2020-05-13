@@ -3,13 +3,39 @@
     <div class="container">
       <h2 class="section_title">{{$t('contacts.title')}}</h2>
       <div class="section_content">
-        <div class="items" v-for="(item, index,id) in getContacts" :key="index">
+        <div class="items">
           <div class="image_container">
-            <img :src="images[id]" class="item_image" />
+            <img :src="images[0]" class="item_image" />
           </div>
           <div class="item_text">
-            <p class="subtitle">{{item}}</p>
-            <p class="description">{{subtitle[id]}}</p>
+            <p class="subtitle">{{$t('contacts.items.subscribe')}}</p>
+            <p class="description">
+              <a
+                href="https://facebook.com/taxeshelp"
+                class="submenu_link"
+                target="_blank"
+              >@taxeshelp</a>
+            </p>
+          </div>
+        </div>
+        <div class="items">
+          <div class="image_container">
+            <img :src="images[1]" class="item_image" />
+          </div>
+          <div class="item_text">
+            <p class="subtitle">{{$t('contacts.items.phone')}}</p>
+            <p class="description">+38(099)381-11-18</p>
+          </div>
+        </div>
+        <div class="items">
+          <div class="image_container">
+            <img :src="images[2]" class="item_image" />
+          </div>
+          <div class="item_text">
+            <p class="subtitle">{{$t('contacts.items.mail')}}</p>
+            <p class="description">
+              <a class="submenu_link" href="mailto:0993811118@ukr.net">0993811118@ukr.net</a>
+            </p>
           </div>
         </div>
       </div>
@@ -80,7 +106,9 @@ export default {
   color: $mainFontColor;
   font-size: 14px;
 }
-
+.submenu_link {
+  color: $mainFontColor;
+}
 @media screen and (max-width: 768px) {
   .section_content {
     flex-direction: column;

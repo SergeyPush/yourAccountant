@@ -65,8 +65,8 @@ body {
 @media screen and (max-width: 768px) {
   .container {
     max-width: 90%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 </style>

@@ -22,12 +22,8 @@
 import Menu from "./utils/Menu";
 import ContactForm from "./utils/ContactForm";
 
-import img from "@/assets/img/header-image.jpg";
-import img1 from "@/assets/img/header-image1.jpg";
-import img2 from "@/assets/img/header-image2.jpg";
-import img3 from "@/assets/img/header-image3.jpg";
-import img4 from "@/assets/img/header-image4.jpg";
-import img5 from "@/assets/img/header-image5.jpg";
+const img = require("@/assets/img/header-image.jpg");
+const img1 = require("@/assets/img/header-image1.jpg");
 
 export default {
   components: {
@@ -36,7 +32,7 @@ export default {
   },
   data() {
     return {
-      images: [img, img1, img2, img3, img4, img5],
+      images: [img, img1],
       randomImage: this.getRandomImage
     };
   },
@@ -59,7 +55,7 @@ export default {
 .header {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 90%;
+  background-position: center 88%;
   padding-bottom: 40px;
 }
 .content {

@@ -22,8 +22,11 @@
               <span>+38(099)381-11-18</span>
             </li>
             <li class="sub_menu-item">
+              <i class="fab fa-telegram-plane"></i>
+              <a class="submenu_link" href="tg://resolve?domain=@maryna">@maryna</a>
+            </li>
+            <li class="sub_menu-item">
               <i class="fab fa-skype"></i>
-
               <a class="submenu_link" href="skype:spushkovskiy?chat">maryna_k</a>
             </li>
             <li class="sub_menu-item">
@@ -138,7 +141,7 @@ export default {
   flex-wrap: nowrap;
 }
 .menu {
-  padding-top: 10px;
+  padding-top: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;

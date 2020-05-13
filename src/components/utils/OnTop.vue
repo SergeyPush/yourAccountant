@@ -43,14 +43,7 @@ export default {
   bottom: 100px;
   right: 5%;
   border-radius: 5px;
-  // box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-
-  &:hover,
-  &:active {
-    transition: background-color 0.2s linear;
-    background-color: $darkColor;
-  }
 }
 .link {
   display: block;
@@ -69,6 +62,7 @@ export default {
   animation: appear 0.3s ease-in;
 }
 .inactive {
+  opacity: 0;
   right: -100px;
   animation: leave 0.4s ease-out;
 }
@@ -76,6 +70,7 @@ export default {
 @keyframes leave {
   from {
     right: 5%;
+    opacity: 1;
   }
   to {
     right: -100px;
@@ -93,13 +88,11 @@ export default {
     right: 6%;
   }
 }
-@keyframes disappear {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    right: -100px;
+
+@media screen and (min-width: 768px) {
+  .top_button:hover {
+    transition: background-color 0.2s linear;
+    background-color: $darkColor;
   }
 }
 </style>
