@@ -58,11 +58,10 @@
 
 <script>
 import face from "@/assets/icons/isolated-monochrome-white.svg";
-import Drawer from "./Drawer";
 
 export default {
   components: {
-    Drawer
+    Drawer: () => import(/* webpackPrefetch: true */ "./Drawer.vue")
   },
 
   data() {

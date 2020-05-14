@@ -1,7 +1,7 @@
 <template>
   <section class="cooperation" id="cooperation" v-scroll-reveal.reset="{duration:1000}">
     <div class="container">
-      <h2 class="section_title">{{$t('cooperation.title')}}</h2>
+      <h1 class="section_title">{{$t('cooperation.title')}}</h1>
       <div class="section_content">
         <div class="items" v-for="(item, index, id) in getItems" :key="index">
           <div class="image_container">
