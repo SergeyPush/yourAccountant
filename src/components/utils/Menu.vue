@@ -1,7 +1,7 @@
 <template>
   <div class="menu container">
     <div class="logo">
-      <img :src="face" class="logo__image" />
+      <img :src="face" class="logo__image" alt="image" />
       <p class="logo__text">Твій бухгалтер</p>
     </div>
     <nav class="navigation">

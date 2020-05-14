@@ -97,6 +97,8 @@ export default {
   }
   .hero {
     margin-bottom: 20px;
+    margin-right: 0;
+    max-width: 350px;
   }
 }
 

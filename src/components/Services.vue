@@ -9,7 +9,7 @@
           <ul class="tov_list">
             <li class="list_item" v-for="(item, index) in getTovs" :key="index">
               <div class="list_item_image">
-                <img :src="green_arrow" class="arrow" />
+                <img :src="green_arrow" class="arrow" alt="image" />
               </div>
               <p class="list_item_text">{{item}}</p>
             </li>
@@ -21,7 +21,7 @@
           <ul class="fop_list">
             <li class="list_item" v-for="(item, index) in getFops" :key="index">
               <div class="list_item_image">
-                <img :src="red_arrow" class="arrow" />
+                <img :src="red_arrow" class="arrow" alt="image" />
               </div>
               <p class="list_item_text">{{item}}</p>
             </li>

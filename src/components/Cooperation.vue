@@ -5,7 +5,7 @@
       <div class="section_content">
         <div class="items" v-for="(item, index, id) in getItems" :key="index">
           <div class="image_container">
-            <img :src="images[id]" class="item_image" />
+            <img :src="images[id]" class="item_image" alt="image" />
           </div>
           <p class="items_text">{{item}}</p>
         </div>

@@ -2,7 +2,7 @@
   <footer class="footer" v-scroll-reveal.reset="{duration:1000, mobile:false}">
     <div class="section_content container">
       <p class="sign">Made with</p>
-      <img :src="heart" class="heart" />
+      <img :src="heart" class="heart" alt="image" />
       <p class="by">
         by
         <span class="company">SP Design</span>

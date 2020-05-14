@@ -5,7 +5,7 @@
       <div class="section_content">
         <div class="items">
           <div class="image_container">
-            <img :src="images[0]" class="item_image" />
+            <img :src="images[0]" class="item_image" alt="image" />
           </div>
           <div class="item_text">
             <p class="subtitle">{{$t('contacts.items.subscribe')}}</p>
@@ -20,7 +20,7 @@
         </div>
         <div class="items">
           <div class="image_container">
-            <img :src="images[1]" class="item_image" />
+            <img :src="images[1]" class="item_image" alt="image" />
           </div>
           <div class="item_text">
             <p class="subtitle">{{$t('contacts.items.phone')}}</p>
@@ -29,7 +29,7 @@
         </div>
         <div class="items">
           <div class="image_container">
-            <img :src="images[2]" class="item_image" />
+            <img :src="images[2]" class="item_image" alt="image" />
           </div>
           <div class="item_text">
             <p class="subtitle">{{$t('contacts.items.mail')}}</p>

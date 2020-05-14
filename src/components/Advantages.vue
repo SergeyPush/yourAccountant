@@ -5,7 +5,7 @@
     <div class="section_content">
       <div class="item" v-for="(item,index, id) in getAdvantages" :key="index">
         <div class="image_container">
-          <img :src="images[id]" class="image" />
+          <img :src="images[id]" class="image" alt="image" />
         </div>
         <p class="item_text">{{item}}</p>
       </div>
