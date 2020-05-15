@@ -1,6 +1,6 @@
 <template>
   <div class="backdrop" @click="closeMenu">
-    <div class="drawer animation">
+    <div class="drawer">
       <i class="fas fa-times close" @click="closeMenu"></i>
 
       <div class="drawer_top">
@@ -50,21 +50,6 @@ export default {
   padding: 20px;
   z-index: 3;
   opacity: 0.92;
-}
-.animation {
-  animation: appear 0.3s ease-out;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: translateX(+100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .close {

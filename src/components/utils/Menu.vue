@@ -46,13 +46,15 @@
     <div class="hamburger">
       <i class="fas fa-bars" @click="handleOpenMenu"></i>
     </div>
-    <Drawer
-      v-if="menuIsOpened"
-      :closeMenu="handleCloseMenu"
-      :items="dafaultData"
-      :language="language"
-      :changeLocale="changeLocale"
-    />
+    <transition name="draver">
+      <Drawer
+        v-if="menuIsOpened"
+        :closeMenu="handleCloseMenu"
+        :items="dafaultData"
+        :language="language"
+        :changeLocale="changeLocale"
+      />
+    </transition>
   </div>
 </template>
 
@@ -257,6 +259,37 @@ export default {
   100% {
     display: block;
     opacity: 0.9;
+  }
+}
+
+.draver-enter-active {
+  animation: slideIn 0.3s ease-in;
+}
+.draver-leave-active {
+  animation: slideOut 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(+100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
   }
 }
 
