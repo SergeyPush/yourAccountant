@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c38b1ddb7472a1bf012d",
-    "url": "/yourAccountant/css/app.d9662596.css"
-  },
-  {
-    "revision": "6ba17b7bb19a7a6c4b5b",
-    "url": "/yourAccountant/css/chunk-340195e0.c37b526f.css"
+    "revision": "b9e04f73a4ab2925f761",
+    "url": "/yourAccountant/css/app.cf960641.css"
   },
   {
     "revision": "dea0e01ca56b2a7a9084",
     "url": "/yourAccountant/css/chunk-51994342.09b6a03f.css"
+  },
+  {
+    "revision": "bc113aa380c8fcb874b1",
+    "url": "/yourAccountant/css/chunk-55b5f088.3213a690.css"
   },
   {
     "revision": "11ca83f8e31e57868e6a",
@@ -144,12 +144,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/green-arrow.d7fd428b.svg"
   },
   {
-    "revision": "1ad3043b2580d146a5420d404560c764",
-    "url": "/yourAccountant/img/header-image.1ad3043b.jpg"
+    "revision": "55ac73d98acc2c57fdd6e456af85347d",
+    "url": "/yourAccountant/img/header-image.55ac73d9.webp"
   },
   {
-    "revision": "f9860d0e547f6641b738628eac187d12",
-    "url": "/yourAccountant/img/header-image1.f9860d0e.jpg"
+    "revision": "9ce053b25ff7e879a27f3880a254f9c5",
+    "url": "/yourAccountant/img/header-image1.9ce053b2.webp"
   },
   {
     "revision": "6b277b8ccd20e1f42caa04d748718cda",
@@ -160,20 +160,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "55ffa2fb62c7eb39fe0d8f3bab871230",
+    "revision": "393482d02d90d5a8b21d60f7d1a8da96",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "c38b1ddb7472a1bf012d",
-    "url": "/yourAccountant/js/app.a3c6e6d8.js"
-  },
-  {
-    "revision": "6ba17b7bb19a7a6c4b5b",
-    "url": "/yourAccountant/js/chunk-340195e0.87e400ec.js"
+    "revision": "b9e04f73a4ab2925f761",
+    "url": "/yourAccountant/js/app.0f752d59.js"
   },
   {
     "revision": "dea0e01ca56b2a7a9084",
     "url": "/yourAccountant/js/chunk-51994342.dde691a7.js"
+  },
+  {
+    "revision": "bc113aa380c8fcb874b1",
+    "url": "/yourAccountant/js/chunk-55b5f088.f10dc166.js"
   },
   {
     "revision": "11ca83f8e31e57868e6a",
