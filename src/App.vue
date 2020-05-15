@@ -61,6 +61,8 @@ body {
   font-family: $mainFont;
   font-style: normal;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media screen and (max-width: 768px) {

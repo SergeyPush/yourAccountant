@@ -1,6 +1,6 @@
 <template>
   <transition name="animate">
-    <div :class="['top_button', displayButton?'active':'inactive']">
+    <div class="top_button" v-if="displayButton">
       <a href="#top" class="link">
         <i class="fas fa-angle-up arrow"></i>
       </a>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+// :class="['top_button', displayButton?'active':'inactive']"
 export default {
   data() {
     return {
@@ -58,12 +59,11 @@ export default {
   color: #ffffff;
   text-align: center;
 }
-.active {
+
+.animate-enter-active {
   animation: appear 0.3s ease-in;
 }
-.inactive {
-  opacity: 0;
-  right: -100px;
+.animate-leave-active {
   animation: leave 0.4s ease-out;
 }
 
