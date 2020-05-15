@@ -14,6 +14,7 @@
                 href="https://facebook.com/taxeshelp"
                 class="submenu_link"
                 target="_blank"
+                rel="noopener"
               >@taxeshelp</a>
             </p>
           </div>

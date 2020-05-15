@@ -22,8 +22,8 @@
 import Menu from "./utils/Menu";
 import ContactForm from "./utils/ContactForm";
 
-const img = require("@/assets/img/header-image.jpg");
-const img1 = require("@/assets/img/header-image1.jpg");
+const img = require("@/assets/img/header-image.webp");
+const img1 = require("@/assets/img/header-image1.webp");
 
 export default {
   components: {

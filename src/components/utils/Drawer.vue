@@ -4,7 +4,7 @@
       <i class="fas fa-times close" @click="closeMenu"></i>
 
       <div class="drawer_top">
-        <a href="https://facebook.com/taxeshelp" target="_blank">
+        <a href="https://facebook.com/taxeshelp" target="_blank" rel="noopener">
           <i class="fab fa-facebook-f facebook"></i>
         </a>
         <p class="language" @click="changeLocale">{{language}}</p>
