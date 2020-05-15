@@ -1,6 +1,6 @@
 <template>
   <section class="calculator container" id="calculator" v-scroll-reveal.reset="{duration:1000}">
-    <h1 class="section_title">{{$t("calculator.title")}}</h1>
+    <h2 class="section_title">{{$t("calculator.title")}}</h2>
     <p class="section_subtitle">{{$t("calculator.subtitle")}}</p>
     <div class="section_content">
       <ContactForm :buttonText="$t('contactForm.buttonSecond')"></ContactForm>

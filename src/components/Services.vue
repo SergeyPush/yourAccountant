@@ -1,7 +1,7 @@
 <template>
   <section class="services" id="services" v-scroll-reveal.reset="{duration:1000}">
     <div class="container">
-      <h1 class="section_title">{{$t('services.header')}}</h1>
+      <h2 class="section_title">{{$t('services.header')}}</h2>
       <div class="services_items">
         <div class="services_tov">
           <h3 class="tov_title">{{$t('services.header_tov')}}</h3>

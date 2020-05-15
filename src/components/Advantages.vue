@@ -1,6 +1,6 @@
 <template>
   <section class="container advantages" id="advantages" v-scroll-reveal.reset="{duration:1000}">
-    <h1 class="section_title">{{$t('advantages.title')}}</h1>
+    <h2 class="section_title">{{$t('advantages.title')}}</h2>
 
     <div class="section_content">
       <div class="item" v-for="(item,index, id) in getAdvantages" :key="index">
