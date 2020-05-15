@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b9e04f73a4ab2925f761",
-    "url": "/yourAccountant/css/app.cf960641.css"
+    "revision": "42b6115c669047d4dd89",
+    "url": "/yourAccountant/css/app.042c564f.css"
+  },
+  {
+    "revision": "0e5c530db9caba939772",
+    "url": "/yourAccountant/css/chunk-4ec46578.7220ac10.css"
   },
   {
     "revision": "dea0e01ca56b2a7a9084",
     "url": "/yourAccountant/css/chunk-51994342.09b6a03f.css"
-  },
-  {
-    "revision": "bc113aa380c8fcb874b1",
-    "url": "/yourAccountant/css/chunk-55b5f088.3213a690.css"
   },
   {
     "revision": "11ca83f8e31e57868e6a",
@@ -160,20 +160,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "393482d02d90d5a8b21d60f7d1a8da96",
+    "revision": "5c8278bff54696259199785c9b0e17a7",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "b9e04f73a4ab2925f761",
-    "url": "/yourAccountant/js/app.0f752d59.js"
+    "revision": "42b6115c669047d4dd89",
+    "url": "/yourAccountant/js/app.4fd69d3d.js"
+  },
+  {
+    "revision": "0e5c530db9caba939772",
+    "url": "/yourAccountant/js/chunk-4ec46578.0cca1b4e.js"
   },
   {
     "revision": "dea0e01ca56b2a7a9084",
     "url": "/yourAccountant/js/chunk-51994342.dde691a7.js"
-  },
-  {
-    "revision": "bc113aa380c8fcb874b1",
-    "url": "/yourAccountant/js/chunk-55b5f088.f10dc166.js"
   },
   {
     "revision": "11ca83f8e31e57868e6a",
