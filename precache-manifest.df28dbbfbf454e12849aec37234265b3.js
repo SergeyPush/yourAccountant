@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "42d4c580f5d7f2814800",
-    "url": "/yourAccountant/css/app.54325017.css"
+    "revision": "cb4ebdc1f9992b54cb7c",
+    "url": "/yourAccountant/css/app.8fcc62b5.css"
   },
   {
     "revision": "0e5c530db9caba939772",
@@ -160,12 +160,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "1d353192535049e912e627fb026e8b9f",
+    "revision": "6e929c1846922a98597216816427e329",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "42d4c580f5d7f2814800",
-    "url": "/yourAccountant/js/app.ca16352b.js"
+    "revision": "cb4ebdc1f9992b54cb7c",
+    "url": "/yourAccountant/js/app.2241eefe.js"
   },
   {
     "revision": "0e5c530db9caba939772",
@@ -184,11 +184,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/manifest.json"
   },
   {
-    "revision": "15cedeb8aff5bb973cc5c42e545881bd",
+    "revision": "3dd55ed3b5b2d90ceab6c9ae69810eb2",
     "url": "/yourAccountant/robots.txt"
   },
   {
-    "revision": "62aa50bd75bdc1866769fd752a8556bc",
+    "revision": "3549c3cfe550bb0ef3c2959e8a4d5d31",
     "url": "/yourAccountant/sitemap.xml"
   }
 ]);

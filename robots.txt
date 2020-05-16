@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 
 
-Sitemap: https://sergeypush.github.io/yourAccountant/sitemap.xml
+Sitemap: https://wisexpert.com.ua/sitemap.xml
