@@ -2,7 +2,7 @@
   <div class="menu container">
     <div class="logo">
       <img :src="face" class="logo__image" alt="image" />
-      <p class="logo__text">Твій бухгалтер</p>
+      <p class="logo__text">WisExpert</p>
     </div>
     <nav class="navigation">
       <ul class="menu__list">
@@ -23,15 +23,18 @@
             </li>
             <li class="sub_menu-item">
               <i class="fab fa-telegram-plane"></i>
-              <a class="submenu_link" href="tg://resolve?domain=@maryna">@maryna</a>
+              <a class="submenu_link" href="tg://resolve?domain=@WisExpert">@WisExpert</a>
             </li>
             <li class="sub_menu-item">
               <i class="fab fa-skype"></i>
-              <a class="submenu_link" href="skype:spushkovskiy?chat">maryna_k</a>
+              <a class="submenu_link" href="skype:WisExpert?chat">WisExpert</a>
             </li>
             <li class="sub_menu-item">
               <i class="far fa-envelope"></i>
-              <a class="submenu_link" href="mailto:0993811118@ukr.net">0993811118@ukr.net</a>
+              <a
+                class="submenu_link"
+                href="mailto:w.expert.company@gmail.com"
+              >w.expert.company@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -134,7 +137,6 @@ export default {
   font-size: 24px;
   line-height: 28px;
   color: #ffffff;
-  text-transform: uppercase;
 }
 .navigation {
   display: flex;
@@ -203,7 +205,7 @@ export default {
   display: none;
   position: absolute;
   min-width: 190px;
-  left: -166px;
+  left: -220px;
   z-index: 999;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);

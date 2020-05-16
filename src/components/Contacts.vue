@@ -35,7 +35,10 @@
           <div class="item_text">
             <p class="subtitle">{{$t('contacts.items.mail')}}</p>
             <p class="description">
-              <a class="submenu_link" href="mailto:0993811118@ukr.net">0993811118@ukr.net</a>
+              <a
+                class="submenu_link"
+                href="mailto:w.expert.company@gmail.com"
+              >w.expert.company@gmail.com</a>
             </p>
           </div>
         </div>

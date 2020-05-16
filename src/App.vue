@@ -19,7 +19,7 @@ import Cooperation from "./components/Cooperation";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 import Calculator from "./components/Calculator";
-// import OnTop from "./components/utils/OnTop";
+
 export default {
   components: {
     Header,
