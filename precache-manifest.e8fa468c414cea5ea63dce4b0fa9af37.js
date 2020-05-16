@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "438449c97463d7f13372",
-    "url": "/yourAccountant/css/app.2a236a73.css"
+    "revision": "8c7708927d49e056f24e",
+    "url": "/yourAccountant/css/app.d50686e4.css"
   },
   {
     "revision": "0e5c530db9caba939772",
@@ -14,6 +14,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "11ca83f8e31e57868e6a",
     "url": "/yourAccountant/css/chunk-vendors.387ebcb6.css"
+  },
+  {
+    "revision": "8118e8bc99c86ca0c5d9a5e311a5a3e8",
+    "url": "/yourAccountant/facebook-logo.png"
   },
   {
     "revision": "4e0c44f61654dee68e48d95c7ee0921c",
@@ -160,11 +164,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "3c468e8810e6f10a830823b449357a47",
+    "revision": "70dec8ae1ab9fb2e846bb4c6e7efdfef",
     "url": "/yourAccountant/index.html"
   },
   {
-    "revision": "438449c97463d7f13372",
+    "revision": "8c7708927d49e056f24e",
     "url": "/yourAccountant/js/app.b99735c7.js"
   },
   {
