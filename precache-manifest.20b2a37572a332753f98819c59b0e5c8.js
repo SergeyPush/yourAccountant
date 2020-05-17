@@ -164,7 +164,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yourAccountant/img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "70dec8ae1ab9fb2e846bb4c6e7efdfef",
+    "revision": "5560290b0b5e926fb19d4cb08b6b809f",
     "url": "/yourAccountant/index.html"
   },
   {
