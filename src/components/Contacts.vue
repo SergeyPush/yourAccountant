@@ -97,6 +97,9 @@ export default {
 .item_image {
   width: 60px;
 }
+.image_container {
+  min-width: 60px;
+}
 .item_text {
   padding-left: 20px;
 }

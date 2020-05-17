@@ -5,7 +5,7 @@
       <img :src="heart" class="heart" alt="image" />
       <p class="by">
         by
-        <span class="company">SP Design</span>
+        <span class="company">SP Development</span>
       </p>
     </div>
   </footer>
