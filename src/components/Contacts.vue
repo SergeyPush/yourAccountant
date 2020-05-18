@@ -11,11 +11,11 @@
             <p class="subtitle">{{$t('contacts.items.subscribe')}}</p>
             <p class="description">
               <a
-                href="https://facebook.com/taxeshelp"
+                href="https://facebook.com/wisexpert"
                 class="submenu_link"
                 target="_blank"
                 rel="noopener"
-              >@taxeshelp</a>
+              >@WisExpert</a>
             </p>
           </div>
         </div>

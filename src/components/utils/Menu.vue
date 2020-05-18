@@ -27,7 +27,7 @@
             </li>
             <li class="sub_menu-item">
               <i class="fab fa-skype"></i>
-              <a class="submenu_link" href="skype:WisExpert?chat">WisExpert</a>
+              <a class="submenu_link" href="skype:live:.cid.24d1ded5ed4af49?chat">WisExpert</a>
             </li>
             <li class="sub_menu-item">
               <i class="far fa-envelope"></i>
