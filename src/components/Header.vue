@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="header"
-    id="#top"
-    v-scroll-reveal.reset="{duration:1000}"
-    :style="{backgroundImage: `url(${getRandomImage})`}"
-  >
+  <div class="header" id="#top" v-scroll-reveal.reset="{duration:1000}">
     <Menu @changeLanguage="changeLanguage($event)"></Menu>
     <transition name="appear" appear>
       <div class="content container">
@@ -22,37 +17,38 @@
 import Menu from "./utils/Menu";
 import ContactForm from "./utils/ContactForm";
 
-const img = require("@/assets/img/header-image.jpg");
-const img1 = require("@/assets/img/header-image1.jpg");
+// const img = require("@/assets/img/header-image.jpg");
+// const img1 = require("@/assets/img/header-image1.jpg");
 
 export default {
   components: {
     Menu,
     ContactForm
   },
-  data() {
-    return {
-      images: [img, img1],
-      randomImage: this.getRandomImage
-    };
-  },
+  // data() {
+  //   return {
+  //     images: [img, img1],
+  //     randomImage: this.getRandomImage
+  //   };
+  // },
   methods: {
     changeLanguage(lang) {
       this.$emit("changeLanguage", lang);
     }
-  },
-  computed: {
-    getRandomImage() {
-      const imageIndex = Math.floor(Math.random() * this.images.length);
-      return this.images[imageIndex];
-    }
   }
+  // computed: {
+  //   getRandomImage() {
+  //     const imageIndex = Math.floor(Math.random() * this.images.length);
+  //     return this.images[imageIndex];
+  //   }
+  // }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/scss/_variables.scss";
 .header {
+  background-image: url("../assets/img/header-image1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 88%;
