@@ -92,7 +92,12 @@ export default {
       this.displayMessage();
 
       emailjs
-        .send("gmail", "template_sbRg0J0U", data, "user_5p0b4IT3bwkF3nOhn3S5L")
+        .send(
+          "wegmail",
+          "template_sbRg0J0U",
+          data,
+          "user_5p0b4IT3bwkF3nOhn3S5L"
+        )
         .then(
           result => {
             console.log("SUCCESS!", result.status, result.text);
