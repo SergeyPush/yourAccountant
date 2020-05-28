@@ -117,6 +117,10 @@ export default {
   color: $mainFontColor;
 }
 @media screen and (max-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .section_content {
     flex-direction: column;
   }
@@ -125,6 +129,15 @@ export default {
     margin-right: auto;
     margin-bottom: 30px;
     width: 300px;
+  }
+  .item_text {
+    padding-left: 5px;
+  }
+  .item_image {
+    width: 50px;
+  }
+  .image_container {
+    width: 50px;
   }
 }
 </style>

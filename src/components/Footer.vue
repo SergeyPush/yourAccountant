@@ -38,6 +38,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* padding: 0 10px; */
 }
 .heart {
   margin-right: 10px;
@@ -48,5 +49,19 @@ export default {
   font-weight: 500;
   font-size: 20px;
   color: #3ab882;
+}
+.container {
+  padding: 0 40px;
+}
+@media screen and (max-width: 768px) {
+  .section_content {
+    flex-direction: column;
+  }
+  .sign {
+    margin-bottom: 10px;
+  }
+  .by {
+    margin-top: 6px;
+  }
 }
 </style>

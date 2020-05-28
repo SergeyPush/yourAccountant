@@ -12,11 +12,13 @@ import Success from "./components/utils/Success.vue";
 
 Vue.use(VueMask);
 Vue.use(VueI18n);
-Vue.use(VueScrollReveal);
+
 Vue.component("app-success", Success);
 
 Vue.config.productionTip = false;
-Vue.use(VueScrollReveal);
+Vue.use(VueScrollReveal, {
+  mobile: false,
+});
 
 new Vue({
   store,

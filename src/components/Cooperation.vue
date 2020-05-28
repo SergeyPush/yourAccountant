@@ -44,7 +44,7 @@ export default {
 }
 .section_title {
   font-family: $titleFont;
-  font-size: calc(20px + 1.5vmax);
+  font-size: calc(16px + 1.8vmax);
   line-height: 35px;
   text-align: center;
   letter-spacing: 0.02em;

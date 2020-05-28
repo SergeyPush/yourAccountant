@@ -192,4 +192,16 @@ export default {
   position: absolute;
   top: -14px;
 }
+
+@media screen and (max-width: 768px) {
+  .contact-form {
+    padding: 20px 20px;
+  }
+  .name,
+  .phone,
+  .question,
+  .submit {
+    margin-bottom: 22px;
+  }
+}
 </style>

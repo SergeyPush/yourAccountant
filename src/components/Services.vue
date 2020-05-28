@@ -124,6 +124,10 @@ export default {
   height: 22px;
 }
 @media screen and (max-width: 768px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .services_items {
     display: flex;
     flex-direction: column;
