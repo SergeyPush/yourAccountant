@@ -110,8 +110,8 @@ export default {
     const language = localStorage.getItem("language");
     if (language) {
       this.language = language;
-      this.changeLocale();
     }
+    this.changeLocale();
   }
 };
 </script>
