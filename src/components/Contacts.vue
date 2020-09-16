@@ -2,44 +2,47 @@
   <section class="contact" id="contacts" v-scroll-reveal.reset="{duration:1000}">
     <div class="container">
       <h2 class="section_title">{{$t('contacts.title')}}</h2>
+
       <div class="section_content">
-        <div class="items">
-          <div class="image_container">
-            <img :src="images[0]" class="item_image" alt="image" />
+        <div class="contacts">
+          <div class="contacts_list">
+            <div class="contacts_inner">
+              <p class="inner_subtitle">{{$t('contacts.subtitle')}}</p>
+              <ul class="list">
+                <li class="list_item">
+                  <i class="fas fa-map-marker-alt item_icon"></i>
+                  <span class="item_text">{{$t('contacts.items.address')}}</span>
+                </li>
+                <li class="list_item">
+                  <i class="fas fa-phone item_icon"></i>
+                  <span class="item_text">+38(099)381-11-18</span>
+                </li>
+                <li class="list_item">
+                  <i class="far fa-envelope item_icon"></i>
+                  <span class="item_text">
+                    <a
+                      class="item_link"
+                      href="mailto:w.expert.company@gmail.com"
+                    >w.expert.company@gmail.com</a>
+                  </span>
+                </li>
+                <li class="list_item">
+                  <i class="fab fa-facebook-f item_icon"></i>
+                  <span class="item_text">
+                    <a
+                      class="item_link"
+                      href="https://facebook.com/wisexpert"
+                      target="_blank"
+                      rel="noopener"
+                    >{{$t('contacts.items.facebook')}}</a>
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="item_text">
-            <p class="subtitle">{{$t('contacts.items.subscribe')}}</p>
-            <p class="description">
-              <a
-                href="https://facebook.com/wisexpert"
-                class="submenu_link"
-                target="_blank"
-                rel="noopener"
-              >@WisExpert</a>
-            </p>
-          </div>
-        </div>
-        <div class="items">
-          <div class="image_container">
-            <img :src="images[1]" class="item_image" alt="image" />
-          </div>
-          <div class="item_text">
-            <p class="subtitle">{{$t('contacts.items.phone')}}</p>
-            <p class="description">+38(099)381-11-18</p>
-          </div>
-        </div>
-        <div class="items">
-          <div class="image_container">
-            <img :src="images[2]" class="item_image" alt="image" />
-          </div>
-          <div class="item_text">
-            <p class="subtitle">{{$t('contacts.items.mail')}}</p>
-            <p class="description">
-              <a
-                class="submenu_link"
-                href="mailto:w.expert.company@gmail.com"
-              >w.expert.company@gmail.com</a>
-            </p>
+
+          <div class="contacts_map">
+            <GoogleMap />
           </div>
         </div>
       </div>
@@ -48,22 +51,12 @@
 </template>
 
 <script>
-import facebook from "@/assets/icons/cont-facebook.svg";
-import phone from "@/assets/icons/cont-phone.svg";
-import mail from "@/assets/icons/cont-mail.svg";
+import GoogleMap from "./utils/GoogleMap";
 
 export default {
-  data() {
-    return {
-      images: [facebook, phone, mail],
-      subtitle: ["Your accountant", "+38(099)381-11-18‬", "0993811118@ukr.net"]
-    };
+  components: {
+    GoogleMap,
   },
-  computed: {
-    getContacts() {
-      return this.$t("contacts.items");
-    }
-  }
 };
 </script>
 
@@ -84,60 +77,92 @@ export default {
   margin-top: 6%;
   margin-bottom: 8%;
 }
-.section_content {
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.contacts_list {
+  width: 33%;
+  height: 600px;
+}
+.contacts_inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 100px;
+}
+.inner_subtitle {
+  color: $mainFontColor;
+  font-size: 30px;
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+
+.list_item {
+  padding: 20px 10px 20px 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  align-items: center;
 }
-.items {
-  max-width: 250px;
-  display: flex;
-  flex-direction: row;
+.list_item:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 30px;
 }
-.item_image {
-  width: 60px;
+.list_item:last-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 30px;
 }
-.image_container {
-  min-width: 60px;
+.list_item:nth-child(2) {
+  padding-top: 30px;
+}
+.list_item:nth-child(3) {
+  padding-bottom: 30px;
+}
+
+.item_icon {
+  color: $accentColor;
+  margin-right: 20px;
+  font-size: 22px;
 }
 .item_text {
-  padding-left: 20px;
-}
-.subtitle {
-  font-weight: 500;
-  font-size: 20px;
   color: $mainFontColor;
-  margin-bottom: 14px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
 }
-.description {
-  color: $mainFontColor;
-  font-size: 14px;
-}
-.submenu_link {
+.item_link {
   color: $mainFontColor;
 }
+
+.contacts_map {
+  width: 66%;
+  height: 600px;
+}
+
 @media screen and (max-width: 768px) {
-  .container {
-    padding-left: 0;
-    padding-right: 0;
+  .contacts_map {
+    width: 100%;
   }
-  .section_content {
-    flex-direction: column;
+  .contacts_list {
+    width: 100%;
+    height: auto;
   }
-  .items {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    width: 300px;
+  .contacts_inner {
+    padding-top: 40px;
   }
-  .item_text {
-    padding-left: 5px;
+  .inner_subtitle {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    text-align: center;
   }
-  .item_image {
-    width: 50px;
-  }
-  .image_container {
-    width: 50px;
+
+  .contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
   }
 }
 </style>
