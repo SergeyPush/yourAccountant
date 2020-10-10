@@ -9,9 +9,11 @@ import { i18n } from "./components/plugins/i18n";
 import "./registerServiceWorker";
 import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 import Success from "./components/utils/Success.vue";
+import VueScrollProgressBar from "@guillaumebriday/vue-scroll-progress-bar";
 
 Vue.use(VueMask);
 Vue.use(VueI18n);
+Vue.use(VueScrollProgressBar);
 
 Vue.component("app-success", Success);
 

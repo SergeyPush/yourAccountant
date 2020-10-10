@@ -1,5 +1,6 @@
 <template>
   <div>
+    <vue-scroll-progress-bar height="0.3rem" />
     <Header :language="language" @changeLanguage="handleChangeLanguage($event)"></Header>
     <Services></Services>
     <Advantages></Advantages>
@@ -30,19 +31,19 @@ export default {
     Calculator,
     Footer,
     OnTop: () =>
-      import(/* webpackPrefetch: true */ "./components/utils/OnTop.vue")
+      import(/* webpackPrefetch: true */ "./components/utils/OnTop.vue"),
   },
   data() {
     return {
-      language: "ukr"
+      language: "ukr",
     };
   },
   methods: {
     handleChangeLanguage(lang) {
       localStorage.setItem("language", lang);
       this.$i18n.locale = lang;
-    }
-  }
+    },
+  },
 };
 </script>
 
