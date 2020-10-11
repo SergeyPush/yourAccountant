@@ -1,6 +1,10 @@
 <template>
   <div>
-    <vue-scroll-progress-bar height="0.25rem" />
+    <vue-scroll-progress-bar
+      height="0.25rem"
+      :barClass="{ progress_bar: true }"
+      :backgroundColor="''"
+    />
     <Header
       :language="language"
       @changeLanguage="handleChangeLanguage($event)"
@@ -67,8 +71,9 @@ body {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* overflow-y: hidden; */
-  scrollbar-width: none;
+}
+.progress_bar {
+  background: #4ebd6f;
 }
 
 @media screen and (max-width: 768px) {
