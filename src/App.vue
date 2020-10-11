@@ -1,7 +1,10 @@
 <template>
   <div>
-    <vue-scroll-progress-bar height="0.3rem" />
-    <Header :language="language" @changeLanguage="handleChangeLanguage($event)"></Header>
+    <vue-scroll-progress-bar height="0.25rem" />
+    <Header
+      :language="language"
+      @changeLanguage="handleChangeLanguage($event)"
+    ></Header>
     <Services></Services>
     <Advantages></Advantages>
     <Cooperation></Cooperation>
@@ -64,6 +67,8 @@ body {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow-y: hidden; */
+  scrollbar-width: none;
 }
 
 @media screen and (max-width: 768px) {

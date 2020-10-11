@@ -1,17 +1,23 @@
 <template>
-  <section class="contact" id="contacts" v-scroll-reveal.reset="{duration:1000}">
+  <section
+    class="contact"
+    id="contacts"
+    v-scroll-reveal.reset="{ duration: 1000 }"
+  >
     <div class="container">
-      <h2 class="section_title">{{$t('contacts.title')}}</h2>
+      <h2 class="section_title">{{ $t("contacts.title") }}</h2>
 
       <div class="section_content">
         <div class="contacts">
           <div class="contacts_list">
             <div class="contacts_inner">
-              <p class="inner_subtitle">{{$t('contacts.subtitle')}}</p>
+              <p class="inner_subtitle">{{ $t("contacts.subtitle") }}</p>
               <ul class="list">
                 <li class="list_item">
                   <i class="fas fa-map-marker-alt item_icon"></i>
-                  <span class="item_text">{{$t('contacts.items.address')}}</span>
+                  <span class="item_text">{{
+                    $t("contacts.items.address")
+                  }}</span>
                 </li>
                 <li class="list_item">
                   <i class="fas fa-phone item_icon"></i>
@@ -23,7 +29,8 @@
                     <a
                       class="item_link"
                       href="mailto:w.expert.company@gmail.com"
-                    >w.expert.company@gmail.com</a>
+                      >w.expert.company@gmail.com</a
+                    >
                   </span>
                 </li>
                 <li class="list_item">
@@ -34,7 +41,8 @@
                       href="https://facebook.com/wisexpert"
                       target="_blank"
                       rel="noopener"
-                    >{{$t('contacts.items.facebook')}}</a>
+                      >{{ $t("contacts.items.facebook") }}</a
+                    >
                   </span>
                 </li>
               </ul>
@@ -152,6 +160,7 @@ export default {
   }
   .contacts_inner {
     padding-top: 40px;
+    padding-bottom: 10px;
   }
   .inner_subtitle {
     margin-bottom: 20px;
