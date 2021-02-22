@@ -1,17 +1,20 @@
 <template>
   <div class="menu container">
     <div class="logo">
-      <img :src="face" class="logo__image" alt="image" />
       <p class="logo__text">WisExpert</p>
     </div>
     <nav class="navigation">
       <ul class="menu__list">
-        <li v-for="(item, index) in dafaultData" :key="index" class="menu__item header-item">
-          <a :href="item.link" class="menu__link">{{item.text}}</a>
+        <li
+          v-for="(item, index) in dafaultData"
+          :key="index"
+          class="menu__item header-item"
+        >
+          <a :href="item.link" class="menu__link">{{ item.text }}</a>
         </li>
       </ul>
       <div class="language header-item">
-        <p @click="changeLocale">{{language}}</p>
+        <p @click="changeLocale">{{ language }}</p>
       </div>
       <div class="socials">
         <div class="phone header-item">
@@ -23,23 +26,32 @@
             </li>
             <li class="sub_menu-item">
               <i class="fab fa-telegram-plane"></i>
-              <a class="submenu_link" href="tg://resolve?domain=@WisExpert">@WisExpert</a>
+              <a class="submenu_link" href="tg://resolve?domain=@WisExpert"
+                >@WisExpert</a
+              >
             </li>
             <li class="sub_menu-item">
               <i class="fab fa-skype"></i>
-              <a class="submenu_link" href="skype:live:.cid.24d1ded5ed4af49?chat">WisExpert</a>
+              <a
+                class="submenu_link"
+                href="skype:live:.cid.24d1ded5ed4af49?chat"
+                >WisExpert</a
+              >
             </li>
             <li class="sub_menu-item">
               <i class="far fa-envelope"></i>
-              <a
-                class="submenu_link"
-                href="mailto:w.expert.company@gmail.com"
-              >w.expert.company@gmail.com</a>
+              <a class="submenu_link" href="mailto:w.expert.company@gmail.com"
+                >w.expert.company@gmail.com</a
+              >
             </li>
           </ul>
         </div>
         <div class="facebook header-item">
-          <a href="https://facebook.com/wisexpert" target="_blank" rel="noopener">
+          <a
+            href="https://facebook.com/wisexpert"
+            target="_blank"
+            rel="noopener"
+          >
             <i class="fab fa-facebook-f"></i>
           </a>
         </div>
@@ -66,14 +78,14 @@ import face from "@/assets/icons/isolated-monochrome-white.svg";
 
 export default {
   components: {
-    Drawer: () => import(/* webpackPrefetch: true */ "./Drawer.vue")
+    Drawer: () => import(/* webpackPrefetch: true */ "./Drawer.vue"),
   },
 
   data() {
     return {
       menuIsOpened: false,
       face,
-      language: "ukr"
+      language: "ukr",
     };
   },
   computed: {
@@ -83,9 +95,9 @@ export default {
         { text: this.$t("menu.quality"), link: "#advantages" },
         { text: this.$t("menu.advantages"), link: "#cooperation" },
         { text: this.$t("menu.calculator"), link: "#calculator" },
-        { text: this.$t("menu.contacts"), link: "#contacts" }
+        { text: this.$t("menu.contacts"), link: "#contacts" },
       ];
-    }
+    },
   },
 
   methods: {
@@ -104,7 +116,7 @@ export default {
       this.language === "rus"
         ? (this.language = "ukr")
         : (this.language = "rus");
-    }
+    },
   },
   mounted() {
     const language = localStorage.getItem("language");
@@ -112,7 +124,7 @@ export default {
       this.language = language;
     }
     this.changeLocale();
-  }
+  },
 };
 </script>
 
@@ -134,7 +146,7 @@ export default {
 }
 .logo__text {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 28px;
   color: #ffffff;
 }

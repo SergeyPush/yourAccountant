@@ -1,13 +1,17 @@
 <template>
-  <section class="container advantages" id="advantages" v-scroll-reveal.reset="{duration:1000}">
-    <h2 class="section_title">{{$t('advantages.title')}}</h2>
+  <section
+    class="container advantages"
+    id="advantages"
+    v-scroll-reveal.reset="{ duration: 1000 }"
+  >
+    <h2 class="section_title">{{ $t("advantages.title") }}</h2>
 
     <div class="section_content">
-      <div class="item" v-for="(item,index, id) in getAdvantages" :key="index">
+      <div class="item" v-for="(item, index, id) in getAdvantages" :key="index">
         <div class="image_container">
           <img :src="images[id]" class="image" alt="image" />
         </div>
-        <p class="item_text">{{item}}</p>
+        <p class="item_text">{{ item }}</p>
       </div>
     </div>
   </section>
@@ -23,20 +27,18 @@ import secret from "@/assets/icons/adv-secret.svg";
 export default {
   data() {
     return {
-      images: [knowledge, improvement, think, clock, solution, secret]
+      images: [knowledge, improvement, think, clock, solution, secret],
     };
   },
   computed: {
     getAdvantages() {
       return this.$t("advantages.items");
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/_variables";
-
 .advantages {
   padding-top: 30px;
   padding-bottom: 40px;

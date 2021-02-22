@@ -163,4 +163,8 @@ li {
 input {
   border-radius: none;
   box-shadow: none;
+  outline: none;
+}
+textarea, button {
+  outline: none;
 }

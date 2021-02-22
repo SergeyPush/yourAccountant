@@ -1,11 +1,11 @@
 <template>
-  <div class="header" id="#top" v-scroll-reveal.reset="{duration:1000}">
+  <div class="header" id="#top" v-scroll-reveal.reset="{ duration: 1000 }">
     <Menu @changeLanguage="changeLanguage($event)"></Menu>
     <transition name="appear" appear>
       <div class="content container">
         <div class="hero">
-          <h1 class="hero__title">{{$t("header.title")}}</h1>
-          <p class="hero__desc">{{$t("header.description")}}</p>
+          <h1 class="hero__title">{{ $t("header.title") }}</h1>
+          <p class="hero__desc">{{ $t("header.description") }}</p>
         </div>
         <ContactForm :buttonText="$t('contactForm.submitButton')"></ContactForm>
       </div>
@@ -23,7 +23,7 @@ import ContactForm from "./utils/ContactForm";
 export default {
   components: {
     Menu,
-    ContactForm
+    ContactForm,
   },
   // data() {
   //   return {
@@ -34,8 +34,8 @@ export default {
   methods: {
     changeLanguage(lang) {
       this.$emit("changeLanguage", lang);
-    }
-  }
+    },
+  },
   // computed: {
   //   getRandomImage() {
   //     const imageIndex = Math.floor(Math.random() * this.images.length);
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/_variables.scss";
+/* @import "@/scss/_variables.scss"; */
 .header {
   background-image: url("../assets/img/header-image1.jpg");
   background-repeat: no-repeat;
@@ -72,7 +72,6 @@ export default {
   font-family: $titleFont;
   font-weight: 500;
   font-size: calc(20px + 1.8vmax);
-
   line-height: 120%;
   display: flex;
   align-items: center;

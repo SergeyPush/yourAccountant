@@ -1,11 +1,12 @@
 <template>
   <div class="contact-form">
-    <form @submit.prevent="sendEmail({formdata, parent})">
+    <form @submit.prevent="sendEmail({ formdata, parent })">
       <div class="input-form">
         <span
-          v-if="!validators.formIsValid&&!validators.nameIsValid"
+          v-if="!validators.formIsValid && !validators.nameIsValid"
           class="validation"
-        >{{$t('contactForm.validatename')}}</span>
+          >{{ $t("contactForm.validatename") }}</span
+        >
         <input
           type="text"
           :placeholder="$t('contactForm.name')"
@@ -16,9 +17,10 @@
 
       <div class="input-form">
         <span
-          v-if="!validators.formIsValid&&!validators.phoneIsValid"
+          v-if="!validators.formIsValid && !validators.phoneIsValid"
           class="validation"
-        >{{$t('contactForm.validatephone')}}</span>
+          >{{ $t("contactForm.validatephone") }}</span
+        >
         <input
           type="text"
           :placeholder="$t('contactForm.phone')"
@@ -36,8 +38,8 @@
         class="question"
         v-model="formdata.question"
       ></textarea>
-      <button class="submit">{{buttonText}}</button>
-      <p class="data">{{$t('contactForm.yourData')}}</p>
+      <button class="submit">{{ buttonText }}</button>
+      <p class="data">{{ $t("contactForm.yourData") }}</p>
     </form>
     <app-success v-if="messageIsDisplayed"></app-success>
   </div>
@@ -53,15 +55,15 @@ export default {
       formdata: {
         name: "",
         phone: "",
-        question: ""
+        question: "",
       },
       parent: this.$parent.$data.formData,
       validators: {
         nameIsValid: false,
         phoneIsValid: false,
-        formIsValid: true
+        formIsValid: true,
       },
-      messageIsDisplayed: false
+      messageIsDisplayed: false,
     };
   },
   methods: {
@@ -99,7 +101,7 @@ export default {
           "user_5p0b4IT3bwkF3nOhn3S5L"
         )
         .then(
-          result => {
+          (result) => {
             console.log("SUCCESS!", result.status, result.text);
             this.formdata.name = "";
             this.formdata.phone = "";
@@ -109,15 +111,15 @@ export default {
               system: [],
               type: [],
               additionally: [],
-              employees: []
+              employees: [],
             };
           },
-          error => {
+          (error) => {
             console.log("FAILED...", error);
           }
         );
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -140,9 +142,10 @@ export default {
 .name,
 .phone,
 .question {
+  font-family: $mainFont;
   &::placeholder {
     font-family: $mainFont;
-    font-size: 14px;
+    font-size: 15px;
     color: rgba(0, 0, 0, 0.45);
   }
 }
@@ -173,7 +176,7 @@ export default {
   border: none;
   &:hover {
     opacity: 1;
-    background: #e08b41;
+    background: #e78732;
     transition: all 0.3s ease-out;
   }
 }
@@ -188,8 +191,9 @@ export default {
 }
 .validation {
   color: #ec7063;
-  font-size: 12px;
+  font-weight: bolder;
+  font-size: 15px;
   position: absolute;
-  top: -14px;
+  top: -16px;
 }
 </style>

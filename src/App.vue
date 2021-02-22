@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss">
 @import "./scss/App.scss";
-@import "./scss/_variables.scss";
+/* @import "./scss/_variables.scss"; */
 
 .container {
   max-width: 1100px;
