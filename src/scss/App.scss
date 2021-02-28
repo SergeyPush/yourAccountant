@@ -1,3 +1,5 @@
+@import './hamburger';
+
 html,
 body,
 div,
@@ -85,6 +87,8 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  scroll-behavior: smooth;
+
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -102,7 +106,6 @@ section {
 }
 body {
   line-height: 1;
-  scroll-behavior: smooth;
 
 }
 ol,
@@ -167,4 +170,8 @@ input {
 }
 textarea, button {
   outline: none;
+}
+.colored {
+  color: $accentColor;
+  font-weight: bolder;
 }

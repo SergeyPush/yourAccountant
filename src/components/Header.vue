@@ -4,8 +4,12 @@
     <transition name="appear" appear>
       <div class="content container">
         <div class="hero">
-          <h1 class="hero__title">{{ $t("header.title") }}</h1>
-          <p class="hero__desc">{{ $t("header.description") }}</p>
+          <h1 class="hero__title">
+            {{ $t("header.title") }}
+            <br />
+            <span class="colored">WisExpert</span>
+          </h1>
+          <p class="hero__desc" v-html="$t('header.description')"></p>
         </div>
         <ContactForm :buttonText="$t('contactForm.submitButton')"></ContactForm>
       </div>
@@ -17,36 +21,20 @@
 import Menu from "./utils/Menu";
 import ContactForm from "./utils/ContactForm";
 
-// const img = require("@/assets/img/header-image.jpg");
-// const img1 = require("@/assets/img/header-image1.jpg");
-
 export default {
   components: {
     Menu,
     ContactForm,
   },
-  // data() {
-  //   return {
-  //     images: [img, img1],
-  //     randomImage: this.getRandomImage
-  //   };
-  // },
   methods: {
     changeLanguage(lang) {
       this.$emit("changeLanguage", lang);
     },
   },
-  // computed: {
-  //   getRandomImage() {
-  //     const imageIndex = Math.floor(Math.random() * this.images.length);
-  //     return this.images[imageIndex];
-  //   }
-  // }
 };
 </script>
 
 <style lang="scss" scoped>
-/* @import "@/scss/_variables.scss"; */
 .header {
   background-image: url("../assets/img/header-image1.jpg");
   background-repeat: no-repeat;
@@ -63,25 +51,26 @@ export default {
 }
 
 .hero {
-  max-width: 450px;
-  padding-top: 10%;
+  max-width: 600px;
+  padding-top: 8%;
   margin-right: 10px;
 }
 
 .hero__title {
   font-family: $titleFont;
   font-weight: 500;
-  font-size: calc(20px + 1.8vmax);
-  line-height: 120%;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-.hero__desc {
-  font-size: 22px;
+  /* font-size: calc(20px + 1.3vmax); */
+  font-size: calc(44px);
   line-height: 140%;
   color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.hero__desc {
+  font-size: 22px;
+  line-height: 158%;
+  color: #ffffff;
+  font-weight: 500;
 }
 @media screen and (max-width: 768px) {
   .content {

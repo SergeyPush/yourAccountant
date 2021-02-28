@@ -174,10 +174,11 @@ export default {
   text-transform: uppercase;
   cursor: pointer;
   border: none;
+  filter: brightness(1);
   &:hover {
     opacity: 1;
-    background: #e78732;
     transition: all 0.3s ease-out;
+    filter: brightness(0.9);
   }
 }
 .data {

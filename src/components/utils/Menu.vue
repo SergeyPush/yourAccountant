@@ -55,12 +55,31 @@
             <i class="fab fa-facebook-f"></i>
           </a>
         </div>
+        <div class="instagram header-item">
+          <a
+            href="https://www.instagram.com/wisexpert_buh/"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
     </nav>
 
-    <div class="hamburger">
+    <!-- <div class="hamburger">
       <i class="fas fa-bars" @click="handleOpenMenu"></i>
-    </div>
+    </div> -->
+    <button
+      @click="handleOpenMenu"
+      class="hamburger hamburger--collapse"
+      :class="[menuIsOpened ? 'is-active' : '']"
+      type="button"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
     <transition name="draver">
       <Drawer
         v-if="menuIsOpened"
@@ -102,7 +121,7 @@ export default {
 
   methods: {
     handleOpenMenu() {
-      this.menuIsOpened = true;
+      this.menuIsOpened = !this.menuIsOpened;
     },
     handleCloseMenu(event) {
       if (event.target !== event.currentTarget) {
@@ -149,6 +168,7 @@ export default {
   font-size: 28px;
   line-height: 28px;
   color: #ffffff;
+  font-family: $titleFont;
 }
 .navigation {
   display: flex;
@@ -195,9 +215,12 @@ export default {
 .socials {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .facebook,
-.phone {
+.phone,
+.instagram {
+  margin-left: 1rem;
   i {
     font-size: 20px;
     color: #ffffff;
@@ -209,9 +232,14 @@ export default {
   }
 }
 .phone {
-  margin-right: 1rem;
   position: relative;
 }
+.instagram {
+  i {
+    font-size: 24px;
+  }
+}
+
 .sub_menu {
   padding: 10px 10px 10px 10px;
   display: none;
@@ -256,6 +284,10 @@ export default {
 
 .hamburger {
   display: none;
+  position: absolute;
+  z-index: 10;
+  top: 8px;
+  right: 20px;
   i {
     font-size: 30px;
     color: #ffffff;
@@ -275,15 +307,25 @@ export default {
     opacity: 0.9;
   }
 }
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
 
 .draver-enter-active {
-  animation: slideIn 0.3s ease-in;
+  animation: appear 0.3s ease-in;
 }
 .draver-leave-active {
-  animation: slideOut 0.3s ease-out;
+  animation: disappear 0.3s ease-out;
 }
 
-@keyframes slideIn {
+/* @keyframes slideIn {
   0% {
     opacity: 0;
     transform: translateX(+100%);
@@ -305,7 +347,7 @@ export default {
     opacity: 0;
     transform: translateX(100%);
   }
-}
+} */
 
 @media screen and (max-width: 768px) {
   .navigation {
