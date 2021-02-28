@@ -92,9 +92,9 @@ export default {
 .menu__list {
   display: flex;
   flex-direction: column;
-  margin-top: 140px;
+  margin-top: 120px;
   margin-bottom: 30px;
-  padding-left: 160px;
+  padding-left: 140px;
 }
 .menu__item {
   margin-bottom: 40px;

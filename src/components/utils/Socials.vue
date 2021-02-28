@@ -54,7 +54,7 @@ export default {
   position: fixed;
   z-index: 5;
   left: 50px;
-  bottom: 8%;
+  bottom: 2%;
 }
 .socials_item {
   margin-bottom: 40px;
