@@ -55,6 +55,15 @@
             <i class="fab fa-facebook-f"></i>
           </a>
         </div>
+        <div class="instagram header-item">
+          <a
+            href="https://www.instagram.com/wisexpert_buh/"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
     </nav>
 
@@ -149,6 +158,7 @@ export default {
   font-size: 28px;
   line-height: 28px;
   color: #ffffff;
+  font-family: $titleFont;
 }
 .navigation {
   display: flex;
@@ -195,9 +205,12 @@ export default {
 .socials {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .facebook,
-.phone {
+.phone,
+.instagram {
+  margin-left: 1rem;
   i {
     font-size: 20px;
     color: #ffffff;
@@ -209,9 +222,14 @@ export default {
   }
 }
 .phone {
-  margin-right: 1rem;
   position: relative;
 }
+.instagram {
+  i {
+    font-size: 24px;
+  }
+}
+
 .sub_menu {
   padding: 10px 10px 10px 10px;
   display: none;
