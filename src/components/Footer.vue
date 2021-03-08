@@ -1,5 +1,8 @@
 <template>
-  <footer class="footer" v-scroll-reveal.reset="{duration:1000, mobile:false}">
+  <footer
+    class="footer"
+    v-scroll-reveal.reset="{ duration: 1000, mobile: false }"
+  >
     <div class="section_content container">
       <p class="sign">Made with</p>
       <img :src="heart" class="heart" alt="image" />
@@ -16,9 +19,9 @@ import heart from "@/assets/icons/footer-heart.svg";
 export default {
   data() {
     return {
-      heart
+      heart,
     };
-  }
+  },
 };
 </script>
 
@@ -45,7 +48,7 @@ export default {
   margin-left: 10px;
 }
 .company {
-  font-family: "PLay", sans-serif;
+  font-family: $playFont;
   font-weight: 500;
   font-size: 20px;
   color: #3ab882;

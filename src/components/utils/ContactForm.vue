@@ -169,6 +169,7 @@ export default {
 .submit {
   padding: 15px;
   background: $accentColor;
+  font-family: $mainFont;
   font-size: 20px;
   color: #ffffff;
   text-transform: uppercase;
