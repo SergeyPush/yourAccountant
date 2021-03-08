@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f10aa88cf0ef121fe088",
-    "url": "css/app.23f489f4.css"
+    "revision": "c2188701cd7fa5b77c59",
+    "url": "css/app.64e61238.css"
   },
   {
     "revision": "457078cf5e6fbbf06eab",
@@ -70,6 +70,94 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bea989e82b07e9687c26fc58a4805021",
     "url": "fonts/fa-solid-900.bea989e8.woff"
+  },
+  {
+    "revision": "5cc74ef8a4c422084726eb9dd1163b82",
+    "url": "fonts/montserrat/montserrat-v15-latin-regular.eot"
+  },
+  {
+    "revision": "6a9e85ac9247f5848db957b873c62e0c",
+    "url": "fonts/montserrat/montserrat-v15-latin-regular.ttf"
+  },
+  {
+    "revision": "8102c4838f9e3d08dad644290a9cb701",
+    "url": "fonts/montserrat/montserrat-v15-latin-regular.woff"
+  },
+  {
+    "revision": "bc3aa95dca08f5fee5291e34959c27bc",
+    "url": "fonts/montserrat/montserrat-v15-latin-regular.woff2"
+  },
+  {
+    "revision": "e6ff1e9f6a30ef32f2e1be6b3690a334",
+    "url": "fonts/play/Play-Bold.eot"
+  },
+  {
+    "revision": "5dd4a4caef0563702c1be577fc2737fc",
+    "url": "fonts/play/Play-Bold.ttf"
+  },
+  {
+    "revision": "8012b5f261184e84a930d13bd2a771a4",
+    "url": "fonts/play/Play-Bold.woff"
+  },
+  {
+    "revision": "66efd823be9e9fbb5b7c466133ee5501",
+    "url": "fonts/play/Play.eot"
+  },
+  {
+    "revision": "b081140fbba53d72e39d51cece0cfad6",
+    "url": "fonts/play/Play.ttf"
+  },
+  {
+    "revision": "26dcef7a4c273a12f6a36986b84b545f",
+    "url": "fonts/play/Play.woff"
+  },
+  {
+    "revision": "d3c76f71fb24c82b6fcdb2b907d572ce",
+    "url": "fonts/roboto-slab/RobotoSlab-Bold.eot"
+  },
+  {
+    "revision": "4ec600093b7ff97bff1694db2fe8bc70",
+    "url": "fonts/roboto-slab/RobotoSlab-Bold.ttf"
+  },
+  {
+    "revision": "3cab033b035d0477f18015b092d14f8e",
+    "url": "fonts/roboto-slab/RobotoSlab-Bold.woff"
+  },
+  {
+    "revision": "82c076174fdedd22bd54b7bbf4c84740",
+    "url": "fonts/roboto-slab/RobotoSlab-Bold.woff2"
+  },
+  {
+    "revision": "8bcccb8167bbc0cf969ae8ed6c619332",
+    "url": "fonts/roboto-slab/RobotoSlab-Regular.eot"
+  },
+  {
+    "revision": "37286c5f91e896bb577c823bab201cc5",
+    "url": "fonts/roboto-slab/RobotoSlab-Regular.ttf"
+  },
+  {
+    "revision": "f79d29f5c71a1296f9695c8c4ae2b016",
+    "url": "fonts/roboto-slab/RobotoSlab-Regular.woff"
+  },
+  {
+    "revision": "9059802d0455832715ef60cbbf7cf63e",
+    "url": "fonts/roboto-slab/RobotoSlab-Regular.woff2"
+  },
+  {
+    "revision": "4be1a572fca40bcb2202504cb17aed91",
+    "url": "fonts/roboto/roboto-v20-latin-regular.eot"
+  },
+  {
+    "revision": "329ae1c377b1fb667f5be6abd50327fc",
+    "url": "fonts/roboto/roboto-v20-latin-regular.ttf"
+  },
+  {
+    "revision": "60fa3c0614b8fb2f394fa29944c21540",
+    "url": "fonts/roboto/roboto-v20-latin-regular.woff"
+  },
+  {
+    "revision": "479970ffb74f2117317f9d24d9e317fe",
+    "url": "fonts/roboto/roboto-v20-latin-regular.woff2"
   },
   {
     "revision": "73ed60f284829af4b13e3ff537539852",
@@ -152,12 +240,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/red-arrow.ba939881.svg"
   },
   {
-    "revision": "c1382d607eede5fd1c29142ea130b1c9",
+    "revision": "b895fbc60e57f3e6c50ea7c8e5e6306d",
     "url": "index.html"
   },
   {
-    "revision": "f10aa88cf0ef121fe088",
-    "url": "js/app.fa435ee2.js"
+    "revision": "c2188701cd7fa5b77c59",
+    "url": "js/app.b39619e0.js"
   },
   {
     "revision": "457078cf5e6fbbf06eab",
