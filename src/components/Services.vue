@@ -1,29 +1,33 @@
 <template>
-  <section class="services" id="services" v-scroll-reveal.reset="{duration:1000}">
+  <section
+    class="services"
+    id="services"
+    v-scroll-reveal.reset="{ duration: 1000 }"
+  >
     <div class="container">
-      <h2 class="section_title">{{$t('services.header')}}</h2>
+      <h2 class="section_title">{{ $t("services.header") }}</h2>
       <div class="services_items">
         <div class="services_tov">
-          <h3 class="tov_title">{{$t('services.header_tov')}}</h3>
-          <p class="prices">{{$t('services.price_tov')}}</p>
+          <h3 class="tov_title">{{ $t("services.header_tov") }}</h3>
+          <p class="prices">{{ $t("services.price_tov") }}</p>
           <ul class="tov_list">
             <li class="list_item" v-for="(item, index) in getTovs" :key="index">
               <div class="list_item_image">
                 <img :src="green_arrow" class="arrow" alt="image" />
               </div>
-              <p class="list_item_text">{{item}}</p>
+              <p class="list_item_text">{{ item }}</p>
             </li>
           </ul>
         </div>
         <div class="services_fop">
-          <h3 class="fop_title">{{$t('services.header_fop')}}</h3>
-          <p class="prices">{{$t('services.price_fop')}}</p>
+          <h3 class="fop_title">{{ $t("services.header_fop") }}</h3>
+          <p class="prices">{{ $t("services.price_fop") }}</p>
           <ul class="fop_list">
             <li class="list_item" v-for="(item, index) in getFops" :key="index">
               <div class="list_item_image">
                 <img :src="red_arrow" class="arrow" alt="image" />
               </div>
-              <p class="list_item_text">{{item}}</p>
+              <p class="list_item_text">{{ item }}</p>
             </li>
           </ul>
         </div>
@@ -39,7 +43,7 @@ export default {
   data() {
     return {
       red_arrow,
-      green_arrow
+      green_arrow,
     };
   },
   computed: {
@@ -48,8 +52,8 @@ export default {
     },
     getFops() {
       return this.$t("services.fop");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -87,7 +91,7 @@ export default {
 }
 .tov_title {
   @extend %titles;
-  color: #54bd9c;
+  color: $greenColor;
 }
 .fop_title {
   @extend %titles;
@@ -111,6 +115,7 @@ export default {
 
 .list_item_text {
   padding: 14px 14px 14px 1px;
+  line-height: 130%;
   color: $mainFontColor;
 }
 .list_item_image {
