@@ -83,11 +83,11 @@ export default {
   }
 }
 %titles {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 28px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 16px;
 }
 .tov_title {
   @extend %titles;

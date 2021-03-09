@@ -67,9 +67,6 @@
       </div>
     </nav>
 
-    <!-- <div class="hamburger">
-      <i class="fas fa-bars" @click="handleOpenMenu"></i>
-    </div> -->
     <button
       @click="handleOpenMenu"
       class="hamburger hamburger--collapse"

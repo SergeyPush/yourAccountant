@@ -20,28 +20,45 @@
                   }}</span>
                 </li>
                 <li class="list_item">
-                  <i class="fas fa-phone item_icon"></i>
-                  <span class="item_text">+38(099)381-11-18</span>
+                  <a href="tel:+380993811118" class="item_text">
+                    <i class="fas fa-phone item_icon"></i>
+                    +38(099)381-11-18</a
+                  >
                 </li>
                 <li class="list_item">
-                  <i class="far fa-envelope item_icon"></i>
                   <span class="item_text">
                     <a
                       class="item_link"
                       href="mailto:w.expert.company@gmail.com"
-                      >w.expert.company@gmail.com</a
+                    >
+                      <i class="far fa-envelope item_icon"></i>
+                      w.expert.company@gmail.com</a
                     >
                   </span>
                 </li>
                 <li class="list_item">
-                  <i class="fab fa-facebook-f item_icon"></i>
                   <span class="item_text">
                     <a
                       class="item_link"
                       href="https://facebook.com/wisexpert"
                       target="_blank"
                       rel="noopener"
-                      >{{ $t("contacts.items.facebook") }}</a
+                    >
+                      <i class="fab fa-facebook-f item_icon"></i>
+                      {{ $t("contacts.items.facebook") }}</a
+                    >
+                  </span>
+                </li>
+                <li class="list_item">
+                  <span class="item_text">
+                    <a
+                      class="item_link"
+                      href="https://www.instagram.com/wisexpert_buh/"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i class="fab fa-instagram item_icon"></i>
+                      {{ $t("contacts.items.instagram") }}</a
                     >
                   </span>
                 </li>
@@ -119,7 +136,7 @@ export default {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 30px;
 }
-.list_item:last-child {
+.list_item:nth-child(4) {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding-top: 30px;
 }
