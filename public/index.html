@@ -59,6 +59,20 @@
       content="бухгалтер, налог, отчет, бухгалтерія, звіт, податок, учет, ФОП, ТОВ, ФЛП, ООО, консультація, РРО, ЕСВ, ЄСВ, Бухгалтерская компания, Бухгальтерська фірма, компанія, послуги бухгалтера, услуги бухгалтера"
     />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BRLHJRE03F"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-BRLHJRE03F");
+    </script>
     <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
     <title>WisExpert</title>
     <!-- Facebook Pixel Code -->
@@ -89,13 +103,14 @@
       fbq("init", "701660370775621");
       fbq("track", "PageView");
     </script> -->
-    <noscript
-      ><img
+    <noscript>
+      <!-- <img
         height="1"
         width="1"
         style="display:none"
         src="https://www.facebook.com/tr?id=701660370775621&ev=PageView&noscript=1"
-    /></noscript>
+    /> -->
+    </noscript>
     <!-- End Facebook Pixel Code -->
   </head>
   <body>
