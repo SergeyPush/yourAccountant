@@ -1,5 +1,5 @@
 <template>
-  <div class="header" id="#top" v-scroll-reveal.reset="{ duration: 1000 }">
+  <div class="header" id="#top">
     <Menu @changeLanguage="changeLanguage($event)"></Menu>
     <transition name="appear" appear>
       <div class="content container">
@@ -80,6 +80,7 @@ export default {
     margin-top: 0;
   }
   .hero {
+    margin-top: 60px;
     margin-bottom: 20px;
     margin-right: 0;
     max-width: 350px;

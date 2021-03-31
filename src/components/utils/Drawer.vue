@@ -36,6 +36,17 @@
 <script>
 import Socials from "./Socials";
 import gsap from "gsap";
+
+function noScroll() {
+  window.scrollTo(0, 0);
+}
+
+// add listener to disable scroll
+window.addEventListener("scroll", noScroll);
+
+// Remove listener to re-enable scroll
+window.removeEventListener("scroll", noScroll);
+
 export default {
   props: ["closeMenu", "items", "language", "changeLocale"],
   components: { Socials },
@@ -53,6 +64,19 @@ export default {
         delay: el.dataset.index * 0.09,
       });
     },
+    disableScroll() {
+      document.body.style.overflow = "hidden";
+      document.querySelector("html").scrollTop = window.scrollY;
+    },
+    enableScroll() {
+      document.body.style.overflow = "auto";
+    },
+  },
+  mounted() {
+    this.disableScroll();
+  },
+  destroyed() {
+    this.enableScroll();
   },
 };
 </script>
