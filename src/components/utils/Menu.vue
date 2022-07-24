@@ -90,28 +90,28 @@
 </template>
 
 <script>
-import face from "@/assets/icons/isolated-monochrome-white.svg";
+import face from '@/assets/icons/isolated-monochrome-white.svg';
 
 export default {
   components: {
-    Drawer: () => import(/* webpackPrefetch: true */ "./Drawer.vue"),
+    Drawer: () => import(/* webpackPrefetch: true */ './Drawer.vue'),
   },
 
   data() {
     return {
       menuIsOpened: false,
       face,
-      language: "ukr",
+      language: 'ukr',
     };
   },
   computed: {
     dafaultData() {
       return [
-        { text: this.$t("menu.services"), link: "#services" },
-        { text: this.$t("menu.quality"), link: "#advantages" },
-        { text: this.$t("menu.advantages"), link: "#cooperation" },
-        { text: this.$t("menu.calculator"), link: "#calculator" },
-        { text: this.$t("menu.contacts"), link: "#contacts" },
+        { text: this.$t('menu.services'), link: '#services' },
+        { text: this.$t('menu.quality'), link: '#advantages' },
+        { text: this.$t('menu.advantages'), link: '#cooperation' },
+        { text: this.$t('menu.calculator'), link: '#calculator' },
+        { text: this.$t('menu.contacts'), link: '#contacts' },
       ];
     },
   },
@@ -127,15 +127,15 @@ export default {
       this.menuIsOpened = false;
     },
     changeLocale() {
-      localStorage.setItem("language", this.language);
-      this.$emit("changeLanguage", this.language);
-      this.language === "rus"
-        ? (this.language = "ukr")
-        : (this.language = "rus");
+      localStorage.setItem('language', this.language);
+      this.$emit('changeLanguage', this.language);
+      this.language === 'rus'
+        ? (this.language = 'ukr')
+        : (this.language = 'rus');
     },
   },
   mounted() {
-    const language = localStorage.getItem("language");
+    const language = localStorage.getItem('language');
     if (language) {
       this.language = language;
     }
@@ -144,9 +144,8 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
-@import "@/scss/_variables.scss";
+@import '@/scss/_variables.scss';
 %transition {
   transition: color 0.2s ease-in-out;
 }
@@ -164,7 +163,7 @@ export default {
   font-weight: bold;
   font-size: 28px;
   line-height: 28px;
-  color: #ffffff;
+  color: $menuColor;
   font-family: $titleFont;
 }
 .navigation {
@@ -191,7 +190,7 @@ export default {
 .menu__link {
   font-weight: 500;
   font-size: 16px;
-  color: #ffffff;
+  color: $lightgrayColor;
   @extend %transition;
   &:hover {
     color: $accentColor;
@@ -201,7 +200,7 @@ export default {
 .language {
   font-weight: 500;
   font-size: 16px;
-  color: #ffffff;
+  color: $lightgrayColor;
   margin-right: 1.5rem;
   cursor: pointer;
   @extend %transition;
@@ -220,7 +219,7 @@ export default {
   margin-left: 1rem;
   i {
     font-size: 20px;
-    color: #ffffff;
+    color: $menuColor;
     @extend %transition;
     &:hover {
       color: $accentColor;

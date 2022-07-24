@@ -5,21 +5,24 @@
       <div class="content container">
         <div class="hero">
           <h1 class="hero__title">
-            {{ $t("header.title") }}
+            {{ $t('header.title') }}
             <br />
             <span class="colored">WisExpert</span>
           </h1>
           <p class="hero__desc" v-html="$t('header.description')"></p>
         </div>
-        <ContactForm :buttonText="$t('contactForm.submitButton')"></ContactForm>
+        <ContactForm
+          :buttonText="$t('contactForm.submitButton')"
+          :shadow="true"
+        ></ContactForm>
       </div>
     </transition>
   </div>
 </template>
 
 <script>
-import Menu from "./utils/Menu";
-import ContactForm from "./utils/ContactForm";
+import Menu from './utils/Menu';
+import ContactForm from './utils/ContactForm';
 
 export default {
   components: {
@@ -28,7 +31,7 @@ export default {
   },
   methods: {
     changeLanguage(lang) {
-      this.$emit("changeLanguage", lang);
+      this.$emit('changeLanguage', lang);
     },
   },
 };
@@ -36,14 +39,21 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  background-image: url("../assets/img/header-image1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 88%;
+  /* background-image: url('../assets/img/header-image1.jpg'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center 88%; */
+  background: rgb(240, 244, 244);
+  background: linear-gradient(
+    180deg,
+    rgba(240, 244, 244, 1) 6%,
+    rgba(255, 255, 255, 1) 100%
+  );
   padding-bottom: 40px;
+  min-height: 85vh;
 }
 .content {
-  margin-top: 50px;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -58,19 +68,19 @@ export default {
 
 .hero__title {
   font-family: $titleFont;
-  font-weight: 500;
+  font-weight: 600;
   /* font-size: calc(20px + 1.3vmax); */
-  font-size: calc(44px);
+  font-size: calc(46px);
   line-height: 140%;
-  color: #ffffff;
   margin-bottom: 40px;
+  color: $darkColor;
 }
 
 .hero__desc {
   font-size: 22px;
   line-height: 158%;
-  color: #ffffff;
   font-weight: 500;
+  /* font-family: $arsenalFont; */
 }
 @media screen and (max-width: 768px) {
   .content {

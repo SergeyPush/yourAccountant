@@ -1,6 +1,6 @@
 $radioSize: 18px;
 $radioBorder: #d1d7e3;
-$radioActive: #eaa76c;
+$radioActive: #0e9be3;
 
 .radio {
   margin: 10px 0;
@@ -19,7 +19,7 @@ $radioActive: #eaa76c;
       }
       &:before,
       &:after {
-        content: "";
+        content: '';
         width: $radioSize;
         height: $radioSize;
         display: block;
@@ -82,7 +82,7 @@ $radioActive: #eaa76c;
 
   // Box.
   & + label:before {
-    content: "";
+    content: '';
     margin-right: 10px;
     display: inline-block;
     vertical-align: text-top;
@@ -90,6 +90,7 @@ $radioActive: #eaa76c;
     height: 20px;
     background: white;
     border: 1px solid $radioBorder;
+    border-radius: 4px;
   }
 
   // Box hover
@@ -121,7 +122,7 @@ $radioActive: #eaa76c;
 
   // Checkmark. Could be replaced with an image
   &:checked + label:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 5px;
     top: 9px;
