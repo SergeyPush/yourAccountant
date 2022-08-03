@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import Header from "./components/Header";
-import Services from "./components/Services";
-import Advantages from "./components/Advantages";
-import Cooperation from "./components/Cooperation";
-import Contacts from "./components/Contacts";
-import Footer from "./components/Footer";
-import Calculator from "./components/Calculator";
+import Header from './components/Header';
+import Services from './components/Services';
+import Advantages from './components/Advantages';
+import Cooperation from './components/Cooperation';
+import Contacts from './components/Contacts';
+import Footer from './components/Footer';
+import Calculator from './components/Calculator';
 
 export default {
   components: {
@@ -38,16 +38,16 @@ export default {
     Calculator,
     Footer,
     OnTop: () =>
-      import(/* webpackPrefetch: true */ "./components/utils/OnTop.vue"),
+      import(/* webpackPrefetch: true */ './components/utils/OnTop.vue'),
   },
   data() {
     return {
-      language: "ukr",
+      language: 'ukr',
     };
   },
   methods: {
     handleChangeLanguage(lang) {
-      localStorage.setItem("language", lang);
+      localStorage.setItem('language', lang);
       this.$i18n.locale = lang;
     },
   },
@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./scss/App.scss";
+@import './scss/App.scss';
 
 .container {
   max-width: 1100px;

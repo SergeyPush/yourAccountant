@@ -1,11 +1,11 @@
 <template>
-  <div class="contact-form">
+  <div class="contact-form" :class="shadow ? 'shadow' : null">
     <form @submit.prevent="sendEmail({ formdata, parent })">
       <div class="input-form">
         <span
           v-if="!validators.formIsValid && !validators.nameIsValid"
           class="validation"
-          >{{ $t("contactForm.validatename") }}</span
+          >{{ $t('contactForm.validatename') }}</span
         >
         <input
           type="text"
@@ -19,7 +19,7 @@
         <span
           v-if="!validators.formIsValid && !validators.phoneIsValid"
           class="validation"
-          >{{ $t("contactForm.validatephone") }}</span
+          >{{ $t('contactForm.validatephone') }}</span
         >
         <input
           type="text"
@@ -39,23 +39,23 @@
         v-model="formdata.question"
       ></textarea>
       <button class="submit">{{ buttonText }}</button>
-      <p class="data">{{ $t("contactForm.yourData") }}</p>
+      <p class="data">{{ $t('contactForm.yourData') }}</p>
     </form>
     <app-success v-if="messageIsDisplayed"></app-success>
   </div>
 </template>
 
 <script>
-import emailjs from "emailjs-com";
+import emailjs from 'emailjs-com';
 
 export default {
-  props: ["buttonText"],
+  props: ['buttonText', 'shadow'],
   data() {
     return {
       formdata: {
-        name: "",
-        phone: "",
-        question: "",
+        name: '',
+        phone: '',
+        question: '',
       },
       parent: this.$parent.$data.formData,
       validators: {
@@ -95,17 +95,17 @@ export default {
 
       emailjs
         .send(
-          "wegmail",
-          "template_sbRg0J0U",
+          'wegmail',
+          'template_sbRg0J0U',
           data,
-          "user_5p0b4IT3bwkF3nOhn3S5L"
+          'user_5p0b4IT3bwkF3nOhn3S5L'
         )
         .then(
           (result) => {
-            console.log("SUCCESS!", result.status, result.text);
-            this.formdata.name = "";
-            this.formdata.phone = "";
-            this.formdata.question = "";
+            console.log('SUCCESS!', result.status, result.text);
+            this.formdata.name = '';
+            this.formdata.phone = '';
+            this.formdata.question = '';
             this.$parent.$data.formData = {
               form: [],
               system: [],
@@ -115,7 +115,7 @@ export default {
             };
           },
           (error) => {
-            console.log("FAILED...", error);
+            console.log('FAILED...', error);
           }
         );
     },
@@ -124,11 +124,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/_variables.scss";
+@import '@/scss/_variables.scss';
 .contact-form {
   max-width: 350px;
   padding: 30px 30px;
   background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
 }
 .name,
 .phone,
@@ -142,6 +143,7 @@ export default {
 .name,
 .phone,
 .question {
+  border-radius: 6px;
   font-family: $mainFont;
   &::placeholder {
     font-family: $mainFont;
@@ -167,6 +169,7 @@ export default {
   color: rgba(0, 0, 0, 0.6);
 }
 .submit {
+  border-radius: 6px;
   padding: 15px;
   background: $accentColor;
   font-family: $mainFont;
@@ -197,5 +200,8 @@ export default {
   font-size: 15px;
   position: absolute;
   top: -16px;
+}
+.shadow {
+  box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.1);
 }
 </style>

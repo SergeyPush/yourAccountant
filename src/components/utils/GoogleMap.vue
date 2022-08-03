@@ -27,6 +27,7 @@ export default {};
   width: 100%;
 }
 .gmap_canvas {
+  border-radius: 6px;
   overflow: hidden;
   background: none !important;
   height: 100%;

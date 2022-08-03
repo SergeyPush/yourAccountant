@@ -14,12 +14,12 @@ export default {
   data() {
     return {
       scrollPosition: null,
-      displayButton: false
+      displayButton: false,
     };
   },
 
   beforeMount() {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       this.scrollPosition = window.scrollY;
       if (this.scrollPosition > 600) {
         this.displayButton = true;
@@ -29,13 +29,13 @@ export default {
     });
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
+    window.removeEventListener('scroll', this.handleScroll);
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/_variables.scss";
+@import '@/scss/_variables.scss';
 .top_button {
   position: fixed;
   width: 40px;
@@ -44,7 +44,11 @@ export default {
   bottom: 100px;
   right: 5%;
   border-radius: 5px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 0 3px 16px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22); */
+  /* box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.1); */
+  /* box-shadow: 5px 6px 15px -3px rgba(0, 0, 0, 0.3); */
+  /* box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 .link {
   display: block;

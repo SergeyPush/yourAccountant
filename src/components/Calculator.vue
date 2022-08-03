@@ -1,35 +1,53 @@
 <template>
-  <section class="calculator container" id="calculator" v-scroll-reveal.reset="{duration:1000}">
-    <h2 class="section_title">{{$t("calculator.title")}}</h2>
-    <p class="section_subtitle">{{$t("calculator.subtitle")}}</p>
+  <section
+    class="calculator container"
+    id="calculator"
+    v-scroll-reveal.reset="{ duration: 1000 }"
+  >
+    <h2 class="section_title">{{ $t('calculator.title') }}</h2>
+    <p class="section_subtitle">{{ $t('calculator.subtitle') }}</p>
     <div class="section_content">
       <ContactForm :buttonText="$t('contactForm.buttonSecond')"></ContactForm>
       <div class="part1 parts">
         <div class="category">
-          <p class="category_title">{{$t('calculator.form.title')}}</p>
+          <p class="category_title">{{ $t('calculator.form.title') }}</p>
           <label class="radio" v-for="(item, index) in getForm" :key="index">
-            <input type="radio" name="form" :value="item" v-model="formData.form" />
-            <span>{{item}}</span>
+            <input
+              type="radio"
+              name="form"
+              :value="item"
+              v-model="formData.form"
+            />
+            <span>{{ item }}</span>
           </label>
         </div>
         <div class="category">
-          <p class="category_title">{{$t('calculator.system.title')}}</p>
+          <p class="category_title">{{ $t('calculator.system.title') }}</p>
           <label class="radio" v-for="(item, index) in getSystem" :key="index">
-            <input type="radio" name="system" :value="item" v-model="formData.system" />
-            <span>{{item}}</span>
+            <input
+              type="radio"
+              name="system"
+              :value="item"
+              v-model="formData.system"
+            />
+            <span>{{ item }}</span>
           </label>
         </div>
 
         <div class="category">
-          <p class="category_title">{{$t('calculator.employees.title')}}</p>
+          <p class="category_title">{{ $t('calculator.employees.title') }}</p>
           <input type="number" class="input" v-model="formData.employees" />
         </div>
       </div>
       <div class="part2 parts">
         <div class="category">
-          <p class="category_title">{{$t('calculator.type.title')}}</p>
+          <p class="category_title">{{ $t('calculator.type.title') }}</p>
           <ul>
-            <li v-for="(item, index,id) in getType" :key="index" class="list_item">
+            <li
+              v-for="(item, index, id) in getType"
+              :key="index"
+              class="list_item"
+            >
               <input
                 type="checkbox"
                 name="type"
@@ -38,14 +56,20 @@
                 class="styled-checkbox"
                 :id="`type${id}`"
               />
-              <label :for="`type${id}`">{{item}}</label>
+              <label :for="`type${id}`">{{ item }}</label>
             </li>
           </ul>
         </div>
         <div class="category">
-          <p class="category_title">{{$t('calculator.additionally.title')}}</p>
+          <p class="category_title">
+            {{ $t('calculator.additionally.title') }}
+          </p>
           <ul>
-            <li v-for="(item, index,id) in getAdditionally" :key="index" class="list_item">
+            <li
+              v-for="(item, index, id) in getAdditionally"
+              :key="index"
+              class="list_item"
+            >
               <input
                 type="checkbox"
                 name="additionally"
@@ -54,12 +78,12 @@
                 class="styled-checkbox"
                 :id="`additionally${id}`"
               />
-              <label :for="`additionally${id}`">{{item}}</label>
+              <label :for="`additionally${id}`">{{ item }}</label>
             </li>
           </ul>
         </div>
         <div class="category">
-          <p class="category_title">{{$t('calculator.documents.title')}}</p>
+          <p class="category_title">{{ $t('calculator.documents.title') }}</p>
           <input type="number" class="input" v-model="formData.documents" />
         </div>
       </div>
@@ -68,7 +92,7 @@
 </template>
 
 <script>
-import ContactForm from "./utils/ContactForm";
+import ContactForm from './utils/ContactForm';
 export default {
   components: { ContactForm },
   data() {
@@ -78,30 +102,30 @@ export default {
         system: [],
         type: [],
         additionally: [],
-        employees: []
-      }
+        employees: [],
+      },
     };
   },
   computed: {
     getForm() {
-      return this.$t("calculator.form.items");
+      return this.$t('calculator.form.items');
     },
     getSystem() {
-      return this.$t("calculator.system.items");
+      return this.$t('calculator.system.items');
     },
     getType() {
-      return this.$t("calculator.type.items");
+      return this.$t('calculator.type.items');
     },
     getAdditionally() {
-      return this.$t("calculator.additionally.items");
-    }
-  }
+      return this.$t('calculator.additionally.items');
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/_variables.scss";
-@import "@/scss/_radio.scss";
+@import '@/scss/_variables.scss';
+@import '@/scss/_radio.scss';
 .calculator {
   padding-top: 20px;
   padding-bottom: 40px;
@@ -124,10 +148,12 @@ export default {
   padding: 0 10%;
 }
 .section_content {
+  border-radius: 8px;
   display: flex;
   flex-direction: row;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
   justify-content: space-around;
+  box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.1);
 }
 .parts {
   padding: 30px 20px 0 20px;
@@ -143,12 +169,14 @@ export default {
 .category_title {
   font-size: 20px;
   line-height: 26px;
+  font-weight: 500;
   color: $accentColor;
 }
 .list_item {
   margin-top: 8px;
 }
 .input {
+  border-radius: 6px;
   padding: 15px;
   font-weight: 300;
   font-size: 15px;

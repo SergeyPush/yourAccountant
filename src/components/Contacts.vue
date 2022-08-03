@@ -5,34 +5,37 @@
     v-scroll-reveal.reset="{ duration: 1000 }"
   >
     <div class="container">
-      <h2 class="section_title">{{ $t("contacts.title") }}</h2>
+      <h2 class="section_title">{{ $t('contacts.title') }}</h2>
 
       <div class="section_content">
         <div class="contacts">
           <div class="contacts_list">
             <div class="contacts_inner">
-              <p class="inner_subtitle">{{ $t("contacts.subtitle") }}</p>
+              <p class="inner_subtitle">{{ $t('contacts.subtitle') }}</p>
               <ul class="list">
                 <li class="list_item">
                   <i class="fas fa-map-marker-alt item_icon"></i>
                   <span class="item_text">{{
-                    $t("contacts.items.address")
+                    $t('contacts.items.address')
                   }}</span>
                 </li>
                 <li class="list_item">
-                  <a href="tel:+380993811118" class="item_text">
+                  <a
+                    :href="`tel:${getContacts.phone.content}`"
+                    class="item_text"
+                  >
                     <i class="fas fa-phone item_icon"></i>
-                    +38(099)381-11-18</a
+                    {{ getContacts.phone.title }}</a
                   >
                 </li>
                 <li class="list_item">
                   <span class="item_text">
                     <a
                       class="item_link"
-                      href="mailto:w.expert.company@gmail.com"
+                      :href="`mailto:${getContacts.email.content}`"
                     >
                       <i class="far fa-envelope item_icon"></i>
-                      w.expert.company@gmail.com</a
+                      {{ getContacts.email.title }}</a
                     >
                   </span>
                 </li>
@@ -45,7 +48,7 @@
                       rel="noopener"
                     >
                       <i class="fab fa-facebook-f item_icon"></i>
-                      {{ $t("contacts.items.facebook") }}</a
+                      {{ $t('contacts.items.facebook') }}</a
                     >
                   </span>
                 </li>
@@ -58,7 +61,7 @@
                       rel="noopener"
                     >
                       <i class="fab fa-instagram item_icon"></i>
-                      {{ $t("contacts.items.instagram") }}</a
+                      {{ $t('contacts.items.instagram') }}</a
                     >
                   </span>
                 </li>
@@ -76,17 +79,23 @@
 </template>
 
 <script>
-import GoogleMap from "./utils/GoogleMap";
+import GoogleMap from './utils/GoogleMap';
+import contacts from '../assets/contacts';
 
 export default {
   components: {
     GoogleMap,
   },
+  computed: {
+    getContacts() {
+      return contacts;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../scss/_variables.scss";
+@import '../scss/_variables.scss';
 
 .contact {
   padding-top: 30px;
@@ -106,8 +115,10 @@ export default {
 .contacts {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   width: 100%;
 }
 .contacts_list {

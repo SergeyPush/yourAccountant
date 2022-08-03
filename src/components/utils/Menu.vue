@@ -22,7 +22,7 @@
           <ul class="sub_menu">
             <li class="sub_menu-item">
               <i class="fas fa-phone"></i>
-              <span>+38(099)381-11-18</span>
+              <span>{{ getContacts.phone.title }}</span>
             </li>
             <li class="sub_menu-item">
               <i class="fab fa-telegram-plane"></i>
@@ -40,8 +40,10 @@
             </li>
             <li class="sub_menu-item">
               <i class="far fa-envelope"></i>
-              <a class="submenu_link" href="mailto:w.expert.company@gmail.com"
-                >w.expert.company@gmail.com</a
+              <a
+                class="submenu_link"
+                :href="`mailto:${getContacts.email.title}`"
+                >{{ getContacts.email.title }}</a
               >
             </li>
           </ul>
@@ -90,29 +92,34 @@
 </template>
 
 <script>
-import face from "@/assets/icons/isolated-monochrome-white.svg";
+import face from '@/assets/icons/isolated-monochrome-white.svg';
+import contacts from '../../assets/contacts';
 
 export default {
   components: {
-    Drawer: () => import(/* webpackPrefetch: true */ "./Drawer.vue"),
+    Drawer: () => import(/* webpackPrefetch: true */ './Drawer.vue'),
   },
 
   data() {
     return {
       menuIsOpened: false,
       face,
-      language: "ukr",
+      language: 'ukr',
+      contacts,
     };
   },
   computed: {
     dafaultData() {
       return [
-        { text: this.$t("menu.services"), link: "#services" },
-        { text: this.$t("menu.quality"), link: "#advantages" },
-        { text: this.$t("menu.advantages"), link: "#cooperation" },
-        { text: this.$t("menu.calculator"), link: "#calculator" },
-        { text: this.$t("menu.contacts"), link: "#contacts" },
+        { text: this.$t('menu.services'), link: '#services' },
+        { text: this.$t('menu.quality'), link: '#advantages' },
+        { text: this.$t('menu.advantages'), link: '#cooperation' },
+        { text: this.$t('menu.calculator'), link: '#calculator' },
+        { text: this.$t('menu.contacts'), link: '#contacts' },
       ];
+    },
+    getContacts() {
+      return contacts;
     },
   },
 
@@ -127,15 +134,15 @@ export default {
       this.menuIsOpened = false;
     },
     changeLocale() {
-      localStorage.setItem("language", this.language);
-      this.$emit("changeLanguage", this.language);
-      this.language === "rus"
-        ? (this.language = "ukr")
-        : (this.language = "rus");
+      localStorage.setItem('language', this.language);
+      this.$emit('changeLanguage', this.language);
+      this.language === 'rus'
+        ? (this.language = 'ukr')
+        : (this.language = 'rus');
     },
   },
   mounted() {
-    const language = localStorage.getItem("language");
+    const language = localStorage.getItem('language');
     if (language) {
       this.language = language;
     }
@@ -144,9 +151,8 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
-@import "@/scss/_variables.scss";
+@import '@/scss/_variables.scss';
 %transition {
   transition: color 0.2s ease-in-out;
 }
@@ -164,8 +170,9 @@ export default {
   font-weight: bold;
   font-size: 28px;
   line-height: 28px;
-  color: #ffffff;
-  font-family: $titleFont;
+  color: $menuColor;
+  font-family: $logoFont;
+  text-shadow: 1px 1px 2px rgba(180, 212, 250, 0.3);
 }
 .navigation {
   display: flex;
@@ -191,7 +198,7 @@ export default {
 .menu__link {
   font-weight: 500;
   font-size: 16px;
-  color: #ffffff;
+  color: $lightgrayColor;
   @extend %transition;
   &:hover {
     color: $accentColor;
@@ -201,7 +208,7 @@ export default {
 .language {
   font-weight: 500;
   font-size: 16px;
-  color: #ffffff;
+  color: $lightgrayColor;
   margin-right: 1.5rem;
   cursor: pointer;
   @extend %transition;
@@ -220,7 +227,7 @@ export default {
   margin-left: 1rem;
   i {
     font-size: 20px;
-    color: #ffffff;
+    color: $menuColor;
     @extend %transition;
     &:hover {
       color: $accentColor;
@@ -242,7 +249,7 @@ export default {
   display: none;
   position: absolute;
   min-width: 190px;
-  left: -220px;
+  left: -130px;
   z-index: 999;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -321,30 +328,6 @@ export default {
 .draver-leave-active {
   animation: disappear 0.3s ease-out;
 }
-
-/* @keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(+100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-} */
 
 @media screen and (max-width: 768px) {
   .navigation {

@@ -5,11 +5,11 @@
     v-scroll-reveal.reset="{ duration: 1000 }"
   >
     <div class="container">
-      <h2 class="section_title">{{ $t("services.header") }}</h2>
+      <h2 class="section_title">{{ $t('services.header') }}</h2>
       <div class="services_items">
         <div class="services_tov">
-          <h3 class="tov_title">{{ $t("services.header_tov") }}</h3>
-          <p class="prices">{{ $t("services.price_tov") }}</p>
+          <h3 class="tov_title">{{ $t('services.header_tov') }}</h3>
+          <p class="prices">{{ $t('services.price_tov') }}</p>
           <ul class="tov_list">
             <li class="list_item" v-for="(item, index) in getTovs" :key="index">
               <div class="list_item_image">
@@ -20,8 +20,8 @@
           </ul>
         </div>
         <div class="services_fop">
-          <h3 class="fop_title">{{ $t("services.header_fop") }}</h3>
-          <p class="prices">{{ $t("services.price_fop") }}</p>
+          <h3 class="fop_title">{{ $t('services.header_fop') }}</h3>
+          <p class="prices">{{ $t('services.price_fop') }}</p>
           <ul class="fop_list">
             <li class="list_item" v-for="(item, index) in getFops" :key="index">
               <div class="list_item_image">
@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import red_arrow from "@/assets/icons/red-arrow.svg";
-import green_arrow from "@/assets/icons/green-arrow.svg";
+import red_arrow from '@/assets/icons/red-arrow.svg';
+import green_arrow from '@/assets/icons/green-arrow.svg';
 export default {
   data() {
     return {
@@ -48,17 +48,17 @@ export default {
   },
   computed: {
     getTovs() {
-      return this.$t("services.tov");
+      return this.$t('services.tov');
     },
     getFops() {
-      return this.$t("services.fop");
+      return this.$t('services.fop');
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/_variables.scss";
+@import '@/scss/_variables.scss';
 
 .services {
   background-color: #f2f2f2;
@@ -95,7 +95,7 @@ export default {
 }
 .fop_title {
   @extend %titles;
-  color: #ec7063;
+  color: $redColor;
 }
 .prices {
   font-size: 20px;
