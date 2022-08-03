@@ -164,7 +164,8 @@ export default {
   font-size: 28px;
   line-height: 28px;
   color: $menuColor;
-  font-family: $titleFont;
+  font-family: $logoFont;
+  text-shadow: 1px 1px 2px rgba(180, 212, 250, 0.3);
 }
 .navigation {
   display: flex;

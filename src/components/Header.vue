@@ -43,10 +43,10 @@ export default {
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
   /* background-position: center 88%; */
-  background: rgb(240, 244, 244);
+  /* background: rgb(240, 244, 244); */
   background: linear-gradient(
     180deg,
-    rgba(240, 244, 244, 1) 6%,
+    rgba(180, 212, 250, 0.1) 6%,
     rgba(255, 255, 255, 1) 100%
   );
   padding-bottom: 40px;
@@ -62,22 +62,23 @@ export default {
 
 .hero {
   max-width: 600px;
-  padding-top: 8%;
+  padding-top: 9%;
   margin-right: 10px;
 }
 
 .hero__title {
-  font-family: $titleFont;
+  font-family: $logoFont;
   font-weight: 600;
   /* font-size: calc(20px + 1.3vmax); */
   font-size: calc(46px);
   line-height: 140%;
-  margin-bottom: 40px;
+  margin-bottom: 22px;
   color: $darkColor;
+  text-shadow: 1px 1px 2px rgba(180, 212, 250, 0.3);
 }
 
 .hero__desc {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 158%;
   font-weight: 500;
   /* font-family: $arsenalFont; */
