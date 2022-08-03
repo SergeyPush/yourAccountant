@@ -22,7 +22,7 @@
           <ul class="sub_menu">
             <li class="sub_menu-item">
               <i class="fas fa-phone"></i>
-              <span>+38(099)381-11-18</span>
+              <span>{{ getContacts.phone.title }}</span>
             </li>
             <li class="sub_menu-item">
               <i class="fab fa-telegram-plane"></i>
@@ -40,8 +40,10 @@
             </li>
             <li class="sub_menu-item">
               <i class="far fa-envelope"></i>
-              <a class="submenu_link" href="mailto:w.expert.company@gmail.com"
-                >w.expert.company@gmail.com</a
+              <a
+                class="submenu_link"
+                :href="`mailto:${getContacts.email.title}`"
+                >{{ getContacts.email.title }}</a
               >
             </li>
           </ul>
@@ -91,6 +93,7 @@
 
 <script>
 import face from '@/assets/icons/isolated-monochrome-white.svg';
+import contacts from '../../assets/contacts';
 
 export default {
   components: {
@@ -102,6 +105,7 @@ export default {
       menuIsOpened: false,
       face,
       language: 'ukr',
+      contacts,
     };
   },
   computed: {
@@ -113,6 +117,9 @@ export default {
         { text: this.$t('menu.calculator'), link: '#calculator' },
         { text: this.$t('menu.contacts'), link: '#contacts' },
       ];
+    },
+    getContacts() {
+      return contacts;
     },
   },
 
@@ -242,7 +249,7 @@ export default {
   display: none;
   position: absolute;
   min-width: 190px;
-  left: -220px;
+  left: -130px;
   z-index: 999;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -321,30 +328,6 @@ export default {
 .draver-leave-active {
   animation: disappear 0.3s ease-out;
 }
-
-/* @keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(+100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-} */
 
 @media screen and (max-width: 768px) {
   .navigation {

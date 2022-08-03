@@ -26,20 +26,20 @@ export default {
     return {
       socials: [
         {
-          name: "facebook",
-          fa: "fab fa-facebook-f",
-          link: "https://facebook.com/wisexpert",
+          name: 'facebook',
+          fa: 'fab fa-facebook-f',
+          link: 'https://facebook.com/wisexpert',
         },
         {
-          name: "instagram",
-          fa: "fab fa-instagram",
-          link: "https://www.instagram.com/wisexpert_buh/",
+          name: 'instagram',
+          fa: 'fab fa-instagram',
+          link: 'https://www.instagram.com/wisexpert_buh/',
         },
-        { name: "phone", fa: "fas fa-phone", link: "tel:+380993811118" },
+        { name: 'phone', fa: 'fas fa-phone', link: 'tel:+380997778810' },
         {
-          name: "telegram",
-          fa: "fab fa-telegram-plane",
-          link: "tg://resolve?domain=@WisExpert",
+          name: 'telegram',
+          fa: 'fab fa-telegram-plane',
+          link: 'tg://resolve?domain=@WisExpert',
         },
       ],
     };

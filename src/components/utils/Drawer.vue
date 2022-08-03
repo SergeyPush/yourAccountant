@@ -34,26 +34,26 @@
 </template>
 
 <script>
-import Socials from "./Socials";
-import gsap from "gsap";
+import Socials from './Socials';
+import gsap from 'gsap';
 
 function noScroll() {
   window.scrollTo(0, 0);
 }
 
 // add listener to disable scroll
-window.addEventListener("scroll", noScroll);
+window.addEventListener('scroll', noScroll);
 
 // Remove listener to re-enable scroll
-window.removeEventListener("scroll", noScroll);
+window.removeEventListener('scroll', noScroll);
 
 export default {
-  props: ["closeMenu", "items", "language", "changeLocale"],
+  props: ['closeMenu', 'items', 'language', 'changeLocale'],
   components: { Socials },
   methods: {
     beforeEnter(el) {
       el.style.opacity = 0;
-      el.style.transform = "translateX(50px)";
+      el.style.transform = 'translateX(50px)';
     },
     enter(el, done) {
       gsap.to(el, {
@@ -65,11 +65,11 @@ export default {
       });
     },
     disableScroll() {
-      document.body.style.overflow = "hidden";
-      document.querySelector("html").scrollTop = window.scrollY;
+      document.body.style.overflow = 'hidden';
+      document.querySelector('html').scrollTop = window.scrollY;
     },
     enableScroll() {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto';
     },
   },
   mounted() {
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/_variables.scss";
+@import '@/scss/_variables.scss';
 
 .backdrop {
   position: fixed;

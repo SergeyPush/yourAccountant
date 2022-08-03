@@ -20,19 +20,22 @@
                   }}</span>
                 </li>
                 <li class="list_item">
-                  <a href="tel:+380993811118" class="item_text">
+                  <a
+                    :href="`tel:${getContacts.phone.content}`"
+                    class="item_text"
+                  >
                     <i class="fas fa-phone item_icon"></i>
-                    +38(099)381-11-18</a
+                    {{ getContacts.phone.title }}</a
                   >
                 </li>
                 <li class="list_item">
                   <span class="item_text">
                     <a
                       class="item_link"
-                      href="mailto:w.expert.company@gmail.com"
+                      :href="`mailto:${getContacts.email.content}`"
                     >
                       <i class="far fa-envelope item_icon"></i>
-                      w.expert.company@gmail.com</a
+                      {{ getContacts.email.title }}</a
                     >
                   </span>
                 </li>
@@ -77,10 +80,16 @@
 
 <script>
 import GoogleMap from './utils/GoogleMap';
+import contacts from '../assets/contacts';
 
 export default {
   components: {
     GoogleMap,
+  },
+  computed: {
+    getContacts() {
+      return contacts;
+    },
   },
 };
 </script>
