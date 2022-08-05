@@ -16,6 +16,7 @@
     <Contacts></Contacts>
     <Footer></Footer>
     <OnTop></OnTop>
+    <Socials v-if="getWindowWidth > 768"></Socials>
   </div>
 </template>
 
@@ -27,6 +28,7 @@ import Cooperation from './components/Cooperation';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import Calculator from './components/Calculator';
+import Socials from './components/utils/Socials.vue';
 
 export default {
   components: {
@@ -37,6 +39,7 @@ export default {
     Contacts,
     Calculator,
     Footer,
+    Socials,
     OnTop: () =>
       import(/* webpackPrefetch: true */ './components/utils/OnTop.vue'),
   },
@@ -49,6 +52,11 @@ export default {
     handleChangeLanguage(lang) {
       localStorage.setItem('language', lang);
       this.$i18n.locale = lang;
+    },
+  },
+  computed: {
+    getWindowWidth() {
+      return window.innerWidth;
     },
   },
 };
