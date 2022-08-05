@@ -2,9 +2,9 @@
   <section
     class="container advantages"
     id="advantages"
-    v-scroll-reveal.reset="{ duration: 1000 }"
+    v-scroll-reveal="{ duration: 600 }"
   >
-    <h2 class="section_title">{{ $t("advantages.title") }}</h2>
+    <h2 class="section_title">{{ $t('advantages.title') }}</h2>
 
     <div class="section_content">
       <div class="item" v-for="(item, index, id) in getAdvantages" :key="index">
@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import knowledge from "@/assets/icons/adv-student.svg";
-import improvement from "@/assets/icons/adv-improvement.svg";
-import think from "@/assets/icons/adv-think.svg";
-import clock from "@/assets/icons/adv-clock.svg";
-import solution from "@/assets/icons/adv-solution.svg";
-import secret from "@/assets/icons/adv-secret.svg";
+import knowledge from '@/assets/icons/adv-student.svg';
+import improvement from '@/assets/icons/adv-improvement.svg';
+import think from '@/assets/icons/adv-think.svg';
+import clock from '@/assets/icons/adv-clock.svg';
+import solution from '@/assets/icons/adv-solution.svg';
+import secret from '@/assets/icons/adv-secret.svg';
 export default {
   data() {
     return {
@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     getAdvantages() {
-      return this.$t("advantages.items");
+      return this.$t('advantages.items');
     },
   },
 };

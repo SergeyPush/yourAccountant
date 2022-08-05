@@ -1,13 +1,17 @@
 <template>
-  <section class="cooperation" id="cooperation" v-scroll-reveal.reset="{duration:1000}">
+  <section
+    class="cooperation"
+    id="cooperation"
+    v-scroll-reveal="{ duration: 600 }"
+  >
     <div class="container">
-      <h2 class="section_title">{{$t('cooperation.title')}}</h2>
+      <h2 class="section_title">{{ $t('cooperation.title') }}</h2>
       <div class="section_content">
         <div class="items" v-for="(item, index, id) in getItems" :key="index">
           <div class="image_container">
             <img :src="images[id]" class="item_image" alt="image" />
           </div>
-          <p class="items_text">{{item}}</p>
+          <p class="items_text">{{ item }}</p>
         </div>
       </div>
     </div>
@@ -15,28 +19,28 @@
 </template>
 
 <script>
-import demand from "@/assets/icons/coop-demand.svg";
-import sign from "@/assets/icons/coop-sign.svg";
-import pass from "@/assets/icons/coop-pass.svg";
-import buh from "@/assets/icons/coop-buh.svg";
-import vector from "@/assets/icons/coop-vector.svg";
+import demand from '@/assets/icons/coop-demand.svg';
+import sign from '@/assets/icons/coop-sign.svg';
+import pass from '@/assets/icons/coop-pass.svg';
+import buh from '@/assets/icons/coop-buh.svg';
+import vector from '@/assets/icons/coop-vector.svg';
 export default {
   data() {
     return {
       images: [demand, sign, pass, buh],
-      vector
+      vector,
     };
   },
   computed: {
     getItems() {
-      return this.$t("cooperation.items");
-    }
-  }
+      return this.$t('cooperation.items');
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/_variables.scss";
+@import '@/scss/_variables.scss';
 .cooperation {
   background-color: #222831;
   padding-top: 30px;
@@ -67,7 +71,7 @@ export default {
   margin-bottom: 40px;
   position: relative;
   &:not(:last-child):after {
-    content: url("../assets/icons/coop-vector.svg");
+    content: url('../assets/icons/coop-vector.svg');
     position: absolute;
     width: 32px;
     height: 16px;

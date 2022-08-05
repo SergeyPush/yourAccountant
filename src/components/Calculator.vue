@@ -2,7 +2,7 @@
   <section
     class="calculator container"
     id="calculator"
-    v-scroll-reveal.reset="{ duration: 1000 }"
+    v-scroll-reveal="{ duration: 600 }"
   >
     <h2 class="section_title">{{ $t('calculator.title') }}</h2>
     <p class="section_subtitle">{{ $t('calculator.subtitle') }}</p>

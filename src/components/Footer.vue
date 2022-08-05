@@ -1,8 +1,5 @@
 <template>
-  <footer
-    class="footer"
-    v-scroll-reveal.reset="{ duration: 1000, mobile: false }"
-  >
+  <footer class="footer" v-scroll-reveal="{ duration: 600, mobile: false }">
     <div class="section_content container">
       <p class="sign">Made with</p>
       <img :src="heart" class="heart" alt="image" />
@@ -15,7 +12,7 @@
 </template>
 
 <script>
-import heart from "@/assets/icons/footer-heart.svg";
+import heart from '@/assets/icons/footer-heart.svg';
 export default {
   data() {
     return {
@@ -24,7 +21,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="scss" scoped>
 .footer {

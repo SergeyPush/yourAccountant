@@ -1,9 +1,5 @@
 <template>
-  <section
-    class="contact"
-    id="contacts"
-    v-scroll-reveal.reset="{ duration: 1000 }"
-  >
+  <section class="contact" id="contacts" v-scroll-reveal="{ duration: 600 }">
     <div class="container">
       <h2 class="section_title">{{ $t('contacts.title') }}</h2>
 

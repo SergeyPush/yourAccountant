@@ -1,9 +1,5 @@
 <template>
-  <section
-    class="services"
-    id="services"
-    v-scroll-reveal.reset="{ duration: 1000 }"
-  >
+  <section class="services" id="services" v-scroll-reveal="{ duration: 600 }">
     <div class="container">
       <h2 class="section_title">{{ $t('services.header') }}</h2>
       <div class="services_items">
