@@ -10,6 +10,7 @@
       @changeLanguage="handleChangeLanguage($event)"
     ></Header>
     <Services></Services>
+    <Companies />
     <Advantages></Advantages>
     <Cooperation></Cooperation>
     <Calculator></Calculator>
@@ -29,6 +30,7 @@ import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import Calculator from './components/Calculator';
 import Socials from './components/utils/Socials.vue';
+import Companies from './components/Companies.vue';
 
 export default {
   components: {
@@ -39,6 +41,7 @@ export default {
     Contacts,
     Calculator,
     Footer,
+    Companies,
     Socials,
     OnTop: () =>
       import(/* webpackPrefetch: true */ './components/utils/OnTop.vue'),
