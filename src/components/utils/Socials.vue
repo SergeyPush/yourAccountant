@@ -108,7 +108,7 @@ export default {
   margin-bottom: 40px;
   font-size: 30px;
   a {
-    color: #4b4b4b;
+    color: $socialsColor;
   }
   @include desktop {
     margin-bottom: 26px;

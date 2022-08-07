@@ -10,7 +10,8 @@
       @changeLanguage="handleChangeLanguage($event)"
     ></Header>
     <Services></Services>
-    <Advantages></Advantages>
+    <Companies />
+    <!-- <Advantages></Advantages> -->
     <Cooperation></Cooperation>
     <Calculator></Calculator>
     <Contacts></Contacts>
@@ -23,22 +24,23 @@
 <script>
 import Header from './components/Header';
 import Services from './components/Services';
-import Advantages from './components/Advantages';
+// import Advantages from './components/Advantages';
 import Cooperation from './components/Cooperation';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import Calculator from './components/Calculator';
 import Socials from './components/utils/Socials.vue';
+import Companies from './components/Companies.vue';
 
 export default {
   components: {
     Header,
     Services,
-    Advantages,
     Cooperation,
     Contacts,
     Calculator,
     Footer,
+    Companies,
     Socials,
     OnTop: () =>
       import(/* webpackPrefetch: true */ './components/utils/OnTop.vue'),
