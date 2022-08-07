@@ -11,7 +11,7 @@
     ></Header>
     <Services></Services>
     <Companies />
-    <Advantages></Advantages>
+    <!-- <Advantages></Advantages> -->
     <Cooperation></Cooperation>
     <Calculator></Calculator>
     <Contacts></Contacts>
@@ -24,7 +24,7 @@
 <script>
 import Header from './components/Header';
 import Services from './components/Services';
-import Advantages from './components/Advantages';
+// import Advantages from './components/Advantages';
 import Cooperation from './components/Cooperation';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
@@ -36,7 +36,6 @@ export default {
   components: {
     Header,
     Services,
-    Advantages,
     Cooperation,
     Contacts,
     Calculator,
